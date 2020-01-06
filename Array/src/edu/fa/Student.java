@@ -11,4 +11,5 @@ public class Student {
 		Student student = new Student();
 		student.displaySubject();
 	}
+	
 }
