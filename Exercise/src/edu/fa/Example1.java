@@ -32,18 +32,7 @@ public class Example1 {
 					int price2=(number-stair[stair.length-1]+1)*unitPrice[unitPrice.length-1]+amount[amount.length-1];
 					System.out.println(price2);
 				}
-//				for(int i=0;i<BangGia.length-1;i++ ) {
-//					if(a<BangGia[i+1]-BangGia[i]) {
-//						price += a*Tien[i];
-//						break;
-//					} else {
-//						price += (BangGia[i+1]-BangGia[i]-1)*Tien[i];
-//						a-= BangGia[i+1]-BangGia[i]-1;
-//					}
-//				}
-//				if(a>0) {
-//					price+= a*Tien[Tien.length-1];
-//				}
+
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
