@@ -24,7 +24,7 @@ public class InsertDataExample {
 				 name = sc.nextLine();
 				if(isExistName(name)) {
 					
-					System.out.println("Nhap lai ten");
+					System.out.println("Ten bi trung, Nhap lai ten");
 				} else {
 					break;
 				}
@@ -64,7 +64,7 @@ public class InsertDataExample {
 		while (rs.next()) {
 			names.add(rs.getString(1));
 		}
-		System.out.println(names);
+//		System.out.println(names);
 		for (String n : names) {
 			if(n!=null) {
 				if (n.equals(name)) {
