@@ -57,23 +57,27 @@ public class InsertDataExample {
 
 	public static boolean isExistName(String name) throws Exception {
 		Connection conn = new OracleJDBCConnection().getJDBCConnection();
-		String sql = "Select Name from student";
+		String sql = "Select 1 from student where Name = ? ";
 		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, name);
 		ResultSet rs = ps.executeQuery();
-		ArrayList<String> names = new ArrayList<>();
-		while (rs.next()) {
-			names.add(rs.getString(1));
+		if(!rs.next()) {
+			return false;
 		}
+//		ArrayList<String> names = new ArrayList<>();
+//		while (rs.next()) {
+//			names.add(rs.getString(1));
+//		}
 //		System.out.println(names);
-		for (String n : names) {
-			if(n!=null) {
-				if (n.equals(name)) {
-					return true;
-				}
-			}
-			
-		}
+//		for (String n : names) {
+//			if(n!=null) {
+//				if (n.equals(name)) {
+//					return true;
+//				}
+//			}
+//			
+//		}
 		conn.close();
-		return false;
+		return true;
 	}
 }
