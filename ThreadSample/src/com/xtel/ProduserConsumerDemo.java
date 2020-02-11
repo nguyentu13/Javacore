@@ -2,47 +2,53 @@ package com.xtel;
 
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ProduserConsumerDemo {
 
 	public static void main(String[] args) {
 		LinkedList<Integer> queue = new LinkedList<>();
-		int size = 5;
-		Producer producer = new Producer(queue, size);
-		Consumer consumer = new Consumer(queue);
-		Thread producerThread1 = new Thread(producer, "Producer");
-		Thread producerThread2 = new Thread(producer, "Producer");
-		Thread producerThread3 = new Thread(producer, "Producer");
-
-		Thread consumerThread1 = new Thread(consumer, "Consumer");
-		Thread consumerThread2 = new Thread(consumer, "Consumer");
-		Thread consumerThread3 = new Thread(consumer, "Consumer");
+	
+		ExecutorService executorService1 = Executors.newFixedThreadPool(3);
+		ExecutorService executorService2 = Executors.newFixedThreadPool(3);
 		
-		producerThread1.setName("Producer 1");
-		producerThread2.setName("Producer 2");
-		producerThread3.setName("Producer 3");
-		consumerThread1.setName("Consumer 1");
-		consumerThread2.setName("Consumer 2");
-		consumerThread3.setName("Consumer 3");
+		Thread t1 = new Thread(new Runnable() {
 
-		producerThread1.start();
-		producerThread2.start();
-		producerThread3.start();
-		consumerThread1.start();
-		consumerThread2.start();
-		consumerThread3.start();
+			@Override
+			public void run() {
+				while(true) {
+					executorService1.execute(new Producer(queue));
+				}
+				
+			}
+			
+		});
+		
+		Thread t2 = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				while(true) {
+					executorService2.execute(new Consumer(queue));
+				}
+				
+			}
+			
+		});
+		t1.start();
+		t2.start();
 	}
 }
 
 class Producer implements Runnable {
 	private final LinkedList<Integer> queue;
-	private final int size;
-
-	public Producer(LinkedList<Integer> queue, final int size) {
+	private final int size = 10;
+	
+	public Producer(LinkedList<Integer> queue) {
 		this.queue = queue;
-		this.size = size;
 	}
-
+	
 	public void run() {
 		try {
 			produce();
@@ -52,11 +58,10 @@ class Producer implements Runnable {
 	}
 
 	private void produce() throws InterruptedException {
-		while (true) {
 			synchronized (queue) {
 				while (queue.size() == size) {
 					try {
-						System.out.println("Queue is full!!! Queue size : " +size);
+						System.out.println("Queue is full!!! Queue size : " + size);
 						Thread.sleep(100);
 						queue.wait();
 					} catch (Exception ex) {
@@ -66,12 +71,10 @@ class Producer implements Runnable {
 
 				Random random = new Random();
 				int i = random.nextInt(1000);
-				System.out.println(Thread.currentThread().getName()+" putting value : " + i );
+				System.out.println(" putting value : " + i);
 				queue.add(i);
-				queue.notifyAll();
+				queue.notify();
 			}
-
-		}
 	}
 }
 
@@ -91,7 +94,6 @@ class Consumer implements Runnable {
 	}
 
 	private void consume() throws InterruptedException {
-		while (true) {
 			synchronized (queue) {
 				while (queue.isEmpty()) {
 					System.out.println("Queue is empty!!!");
@@ -103,10 +105,8 @@ class Consumer implements Runnable {
 					}
 
 				}
-				System.out.println(Thread.currentThread().getName()+" taking value : " + queue.remove(0));
-				queue.notifyAll();
+				System.out.println(" taking value : " + queue.remove(0));
+				queue.notify();
 			}
-
-		}
 	}
 }
