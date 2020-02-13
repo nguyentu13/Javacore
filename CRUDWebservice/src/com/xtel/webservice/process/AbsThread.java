@@ -1,11 +1,11 @@
 package com.xtel.webservice.process;
 
-import com.xtel.webservie.entiy.Customer;
+import com.xtel.webservie.entiy.Patient;
 
 public abstract class AbsThread extends Thread {
 	private boolean isRunning = true;
 	private long sleepTime = 10;
-	Customer customer = new Customer();
+	Patient patient = new Patient();
 
 	public synchronized void start() {
 		super.start();
@@ -20,9 +20,9 @@ public abstract class AbsThread extends Thread {
 				ex.printStackTrace();
 			}
 
-			synchronized (customer) {
+			synchronized (patient) {
 				try {
-					customer.wait(sleepTime);
+					patient.wait(sleepTime);
 				} catch (Exception ex) {
 					ex.printStackTrace();
 				}

@@ -4,12 +4,12 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 
-import com.xtel.webservie.entiy.Customer;
+import com.xtel.webservie.entiy.Patient;
 
 
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
-public interface CustomerService {
+public interface PatientService {
 	@WebMethod
-	public void insert(Customer customer) throws Exception;
+	public void insert(Patient patient) throws Exception;
 }

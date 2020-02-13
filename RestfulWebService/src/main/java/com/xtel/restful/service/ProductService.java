@@ -1,6 +1,6 @@
 package com.xtel.restful.service;
 
-
+import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -25,7 +25,7 @@ import com.xtel.restful.model.ProductModel;
 public class ProductService {
 	private Gson gson = new Gson();
 	
-	@RolesAllowed("Role.ROLE_ADMIN")
+	@RolesAllowed("ADMIN")
 	@GET
 	@Path("/products")
 	public Response findAll(@DefaultValue("0") @QueryParam("page") String pageIndex) {
@@ -39,7 +39,8 @@ public class ProductService {
 		}
 		return Response.ok().entity(gson.toJson(model.findAll(index - 1))).build();
 	}
-
+	
+	
 	@GET
 	@Path("/products/{id}")
 	public Response findById(@PathParam("id") int id) {
@@ -47,6 +48,7 @@ public class ProductService {
 		return Response.ok().entity(gson.toJson(model.findById(id))).build();
 	}
 	
+	@PermitAll
 	@GET
 	@Path("/products/search")
 	public Response findByName(@QueryParam("q") String keyword) {
