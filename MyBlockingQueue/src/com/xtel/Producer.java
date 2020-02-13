@@ -3,17 +3,17 @@ package com.xtel;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Producer implements Runnable {
-	private final BlockingQueue<Integer> queue;
+	private final MyBlockingQueue<Integer> queue;
 	 
-    Producer(BlockingQueue<Integer> queue) {
+    Producer(MyBlockingQueue<Integer> queue) {
         this.queue = queue;
     }
     
     public void run() {
         try {
             while (true) {
-                queue.put(produce());
-                System.out.println("Produced resource - Queue size() = "  + queue.size());
+                queue.put(produce());              
+                System.out.println("Producer put - Queue size() = "  + queue.size());                
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -21,7 +21,8 @@ public class Producer implements Runnable {
     }
  
     private Integer produce() throws InterruptedException {
-        Thread.sleep(50); // simulate time to produce the data
-        return ThreadLocalRandom.current().nextInt(1, 100);
+    	int a=ThreadLocalRandom.current().nextInt(1, 100);
+        Thread.sleep(50);
+        return a;
     }
 }

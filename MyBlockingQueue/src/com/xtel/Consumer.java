@@ -3,9 +3,9 @@ package com.xtel;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Consumer implements Runnable {
-	private final BlockingQueue<Integer> queue;
+	private final MyBlockingQueue<Integer> queue;
 
-	Consumer(BlockingQueue<Integer> queue) {
+	Consumer(MyBlockingQueue<Integer> queue) {
 		this.queue = queue;
 	}
 
@@ -13,8 +13,8 @@ public class Consumer implements Runnable {
 		try {
 			while (true) {
 				queue.take();
-				System.out.println("Consumed resource - Queue size() = " + queue.size());
-				Thread.sleep(ThreadLocalRandom.current().nextInt(50, 300)); // simulate time passing
+				System.out.println("Consumer take - Queue size() = " + queue.size());
+				Thread.sleep(ThreadLocalRandom.current().nextInt(50, 300)); 
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();

@@ -72,8 +72,35 @@ public class ProductModel {
 
 		return product;
 	}
+	
+	public List<Product> findByName(String keyWord) {
+		List<Product> products = new ArrayList<>();
+		String sql = "SELECT * FROM products WHERE name like ?";
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, "%"+keyWord+"%");
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				Product product = new Product(rs.getInt("id"), rs.getString("name"), rs.getDouble("price"));
+				products.add(product);
 
-	public int save(Product product) {
+			}
+		} catch (Exception ex) {
+			logger.debug(ex);
+		} finally {
+			try {
+				this.conn.close();
+			} catch (SQLException e) {
+				logger.debug(e);
+			}
+		}
+
+		return products;
+	}
+	
+	
+
+	public int insert(Product product) {
 		int id = 0;
 		String sql1 = "INSERT INTO products(name,price) VALUES(?,?)";
 		String sql2 = "SELECT id FROM products ORDER BY id DESC LIMIT 1";
@@ -100,6 +127,47 @@ public class ProductModel {
 
 		return id;
 	}
+	
+	public boolean update(Product product) {
+		boolean isSuccess = false;
+		String sql= "update Products set name = ? , price = ? where id = ?";
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, product.getName());
+			ps.setDouble(2, product.getPrice());
+			ps.setInt(3, product.getId());
+			ps.execute();
+			isSuccess = true;
+		} catch (SQLException e) {
+			logger.debug(e);
+		}
+		
+		
+		return isSuccess;
+	}
+	
+	public Boolean delete(int id){
+        boolean isSucess = false;
+        String sql = "DELETE FROM products WHERE id= ?";
+        try {
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1,id);
+            ps.execute();
+            isSucess = true;
+        }
+        catch (Exception ex){
+            logger.debug(ex);
+        }
+        finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                logger.debug(e);
+            }
+        }
+
+        return isSucess;
+    }
 
 	public int numberOfPage() {
 		int numberPage = 0;
