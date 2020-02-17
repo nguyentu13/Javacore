@@ -1,11 +1,15 @@
 package com.xtel.webservice.process;
 
-import com.xtel.webservie.entiy.Patient;
+import org.apache.log4j.Logger;
+
+import com.xtel.webservice.log.Log;
+import com.xtel.webservie.entiy.Schedule;
 
 public abstract class AbsThread extends Thread {
 	private boolean isRunning = true;
 	private long sleepTime = 10;
-	Patient patient = new Patient();
+	Schedule schedule = new Schedule();
+	private Logger logger = new Log().getLogger(AbsThread.class);
 
 	public synchronized void start() {
 		super.start();
@@ -17,14 +21,14 @@ public abstract class AbsThread extends Thread {
 			try {
 				execute();
 			} catch (Exception ex) {
-				ex.printStackTrace();
+				logger.debug(ex);
 			}
 
-			synchronized (patient) {
+			synchronized (schedule) {
 				try {
-					patient.wait(sleepTime);
+					schedule.wait(sleepTime);
 				} catch (Exception ex) {
-					ex.printStackTrace();
+					logger.debug(ex);
 				}
 			}
 		}

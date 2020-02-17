@@ -7,15 +7,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
+
+import com.xtel.restful.config.DatabaseConfiguration;
 import com.xtel.restful.logging.Log;
 
-
-
-
 public class Connector {
-	private static final String url= "jdbc:mysql://localhost/tu";
-    private static final String user = "root";
-    private static final String password = "12111993";
+	private final static DatabaseConfiguration configrator = DatabaseConfiguration.getInstance();
+	
+	private static final String url= configrator.getUrl();
+    private static final String user = configrator.getUser();
+    private static final String password = configrator.getPassword();
     
     private Logger logger = new Log().getLogger(Connector.class);
 
