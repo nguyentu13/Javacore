@@ -2,6 +2,8 @@ package com.xtel.webservice.implement;
 
 import javax.jws.WebService;
 
+import com.xtel.webservice.cache.MyCache;
+import com.xtel.webservice.model.Connector;
 import com.xtel.webservice.queue.InsertQueue;
 import com.xtel.webservice.service.ScheduleService;
 import com.xtel.webservie.entiy.Schedule;
@@ -11,6 +13,7 @@ import com.xtel.webservie.entiy.Schedule;
 public class ScheduleServiceImpl implements ScheduleService {
 	
 	private static ScheduleServiceImpl instance= new ScheduleServiceImpl();
+	private MyCache cache = MyCache.getInstance();
 	
 	public static ScheduleServiceImpl getInstance() {
 		return instance;
@@ -22,9 +25,18 @@ public class ScheduleServiceImpl implements ScheduleService {
 	}
 
 	@Override
-	public Schedule findbyCode() throws Exception {
-		return null;
+	public Schedule findbyCode(String code) throws Exception {
+		Schedule schedule=null;
+		if(cache.getScheduleFromCache(code)!=null) {
+			return cache.getScheduleFromCache(code);
+		} else {
+			Connector con= new Connector();
+			schedule = con.findByCode(code);
+		}
+		return schedule;
 	}
+
+	
 	
 	
 

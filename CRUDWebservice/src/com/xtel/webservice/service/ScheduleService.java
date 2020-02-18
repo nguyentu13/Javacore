@@ -14,5 +14,6 @@ public interface ScheduleService {
 	public void insert(Schedule schedule) throws Exception;
 	
 	@WebMethod
-	public Schedule findbyCode() throws Exception;
+	public Schedule findbyCode(String code) throws Exception;
+
 }

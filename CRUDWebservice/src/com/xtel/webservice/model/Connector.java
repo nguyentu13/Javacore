@@ -9,7 +9,6 @@ import java.util.UUID;
 
 import org.apache.log4j.Logger;
 
-import com.xtel.webservice.cache.CaffeineCache;
 import com.xtel.webservice.config.DatabaseConfiguration;
 import com.xtel.webservice.log.Log;
 import com.xtel.webservie.entiy.Schedule;
@@ -20,7 +19,7 @@ public class Connector {
 	private final String url = configrator.getUrl();
 	private final String user = configrator.getUser();
 	private final String password = configrator.getPassword();
-	private CaffeineCache cache = CaffeineCache.getInstance();
+//	private MyCache cache = MyCache.getInstance();
 	private PreparedStatement ps = null;
 	private Logger logger = new Log().getLogger(Connector.class);
 
@@ -37,7 +36,7 @@ public class Connector {
 
 	public void insertSchedule(Schedule schedule) {
 		Connection con = getConnection();
-		String sql = "insert into patient(code,name,birthday,address,email,phone) values (?,?,?,?,?,?)";
+		String sql = "insert into schedule(code,name,birthday,address,email,phone) values (?,?,?,?,?,?)";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, UUID.randomUUID().toString());
@@ -59,9 +58,10 @@ public class Connector {
 	}
 
 	public Schedule findByCode(String code) {
+		code="812c242f-d10e-415c-ae77-7f2e7818ffcd";
 		Connection con = getConnection();
-		Schedule patient = null;
-		String sql = "select * from patients where code = ?";
+		Schedule schedule = null;
+		String sql = "select * from schedule where code = ?";
 
 		try {
 			ps = con.prepareStatement(sql);
@@ -70,13 +70,11 @@ public class Connector {
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {
-				patient = new Schedule(rs.getInt("id"), rs.getString("code"), rs.getString("name"),
+				schedule = new Schedule(rs.getInt("id"), rs.getString("code"), rs.getString("name"),
 						rs.getString("birthday"), rs.getString("address"), rs.getString("email"),
 						rs.getString("phone"));
 
-//				int order_id = rs.getInt("id");
-
-//				cache.setOrderCache(code,patient);
+//				cache.setScheduleToCache(code, schedule);
 			}
 
 		} catch (SQLException e) {
@@ -88,6 +86,6 @@ public class Connector {
 				logger.info(e);
 			}
 		}
-		return patient;
+		return schedule;
 	}
 }

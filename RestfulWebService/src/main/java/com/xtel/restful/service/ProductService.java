@@ -32,7 +32,6 @@ public class ProductService {
 	@Path("/products")
 	public Response findAll(@DefaultValue("0") @QueryParam("page") String pageIndex) {
 		String author = request.getHeader("author");
-//		System.out.println(author);
 		if (!Authen.getInstance().authentication(author, "ADMIN")) {
 			return Response.status(Response.Status.UNAUTHORIZED).entity("Unauthorized!").build();
 		}
@@ -50,6 +49,10 @@ public class ProductService {
 	@GET
 	@Path("/products/{id}")
 	public Response findById(@PathParam("id") int id) {
+		String author = request.getHeader("author");
+		if (!Authen.getInstance().authentication(author, "ADMIN")) {
+			return Response.status(Response.Status.UNAUTHORIZED).entity("Unauthorized!").build();
+		}
 		ProductModel model = new ProductModel();
 		return Response.ok().entity(gson.toJson(model.findById(id))).build();
 	}
@@ -57,6 +60,10 @@ public class ProductService {
 	@GET
 	@Path("/products/search")
 	public Response findByName(@QueryParam("q") String keyword) {
+		String author = request.getHeader("author");
+		if (!Authen.getInstance().authentication(author, "ADMIN")) {
+			return Response.status(Response.Status.UNAUTHORIZED).entity("Unauthorized!").build();
+		}
 		ProductModel model = new ProductModel();
 		return Response.ok().entity(gson.toJson(model.findByName(keyword))).build();
 	}
@@ -68,7 +75,7 @@ public class ProductService {
 		Product product = parseBody(body, Product.class);
 		ProductModel model = new ProductModel();
 		int a = model.insert(product);
-		return buildResponse(a);
+		return Response.status(Response.Status.OK).entity(a).build();
 	}
 
 	@PUT
@@ -88,9 +95,9 @@ public class ProductService {
 		return Response.ok().entity(model.delete(id)).build();
 	}
 
-	private Response buildResponse(Object objResponse) {
-		return Response.status(Response.Status.OK).entity(objResponse).build();
-	}
+//	private Response buildResponse(Object objResponse) {
+//		return Response.status(Response.Status.OK).entity(objResponse).build();
+//	}
 
 	private <T> T parseBody(String body, Class<T> t) {
 		return gson.fromJson(body, t);

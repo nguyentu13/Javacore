@@ -15,7 +15,6 @@ public class InsertProcess extends AbsThread {
 	protected void execute() {
 		Schedule schedule = InsertQueue.getInstance().take();
 		Connector connector= new Connector();
-//		System.out.println(schedule.toString());
 		try {
 			connector.insertSchedule(schedule);
 		} catch (Exception e) {
