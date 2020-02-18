@@ -3,7 +3,7 @@ package com.xtel.webservice.cache;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.xtel.webservie.entiy.Schedule;
+import com.xtel.webservice.entity.Schedule;
 
 public class MyCache {
 	private static MyCache ins = new MyCache();

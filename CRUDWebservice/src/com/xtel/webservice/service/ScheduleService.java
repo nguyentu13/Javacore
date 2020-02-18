@@ -4,7 +4,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 
-import com.xtel.webservie.entiy.Schedule;
+import com.xtel.webservice.entity.Schedule;
 
 
 @WebService

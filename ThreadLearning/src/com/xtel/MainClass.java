@@ -1,4 +1,4 @@
-package com.xtel;
+ package com.xtel;
 
 import java.util.Scanner;
 

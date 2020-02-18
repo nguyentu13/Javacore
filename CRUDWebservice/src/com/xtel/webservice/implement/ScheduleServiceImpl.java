@@ -3,10 +3,10 @@ package com.xtel.webservice.implement;
 import javax.jws.WebService;
 
 import com.xtel.webservice.cache.MyCache;
+import com.xtel.webservice.entity.Schedule;
 import com.xtel.webservice.model.Connector;
 import com.xtel.webservice.queue.InsertQueue;
 import com.xtel.webservice.service.ScheduleService;
-import com.xtel.webservie.entiy.Schedule;
 
 
 @WebService(endpointInterface = "com.xtel.webservice.service.ScheduleService")
@@ -32,6 +32,7 @@ public class ScheduleServiceImpl implements ScheduleService {
 		} else {
 			Connector con= new Connector();
 			schedule = con.findByCode(code);
+			cache.setScheduleToCache(code, schedule);
 		}
 		return schedule;
 	}

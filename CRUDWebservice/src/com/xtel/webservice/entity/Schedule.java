@@ -1,4 +1,4 @@
-package com.xtel.webservie.entiy;
+package com.xtel.webservice.entity;
 
 public class Schedule {
 	private int id;
@@ -64,7 +64,7 @@ public class Schedule {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
+
 	public Schedule() {
 		super();
 	}
@@ -82,8 +82,7 @@ public class Schedule {
 
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", code=" + code + ", Name=" + name + ", birthday=" + birthday + ", address="
-				+ address + ", email= " + email + ",  address=\"" + "+ address + \"]";
+		return id + "," + code + "," + name + "," + birthday + "," + address + "," + email + "," + phone + ";";
 	}
 
 }

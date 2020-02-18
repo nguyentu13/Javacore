@@ -9,9 +9,10 @@ import java.util.UUID;
 
 import org.apache.log4j.Logger;
 
+//import com.xtel.webservice.cache.MyCache;
 import com.xtel.webservice.config.DatabaseConfiguration;
+import com.xtel.webservice.entity.Schedule;
 import com.xtel.webservice.log.Log;
-import com.xtel.webservie.entiy.Schedule;
 
 public class Connector {
 	private final DatabaseConfiguration configrator = DatabaseConfiguration.getInstance();
@@ -76,7 +77,7 @@ public class Connector {
 
 //				cache.setScheduleToCache(code, schedule);
 			}
-
+//			System.out.println("Connected!!");
 		} catch (SQLException e) {
 			logger.info(e);
 		} finally {

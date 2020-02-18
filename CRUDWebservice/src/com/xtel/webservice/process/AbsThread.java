@@ -2,8 +2,8 @@ package com.xtel.webservice.process;
 
 import org.apache.log4j.Logger;
 
+import com.xtel.webservice.entity.Schedule;
 import com.xtel.webservice.log.Log;
-import com.xtel.webservie.entiy.Schedule;
 
 public abstract class AbsThread extends Thread {
 	private boolean isRunning = true;
