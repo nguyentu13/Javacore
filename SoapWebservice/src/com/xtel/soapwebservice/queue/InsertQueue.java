@@ -27,7 +27,7 @@ public class InsertQueue {
 		try {
 			queue.put(schedule);
 		} catch (Exception ex) {
-			logger.debug(ex);
+			logger.warn(ex);
 		}
 	}
 
@@ -38,7 +38,7 @@ public class InsertQueue {
 			schedule = (Schedule) queue.take();
 
 		} catch (InterruptedException e) {
-			logger.debug(e);
+			logger.warn(e);
 		}
 
 		return schedule;

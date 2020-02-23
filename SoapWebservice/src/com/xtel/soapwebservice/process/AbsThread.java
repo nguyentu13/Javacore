@@ -21,14 +21,14 @@ public abstract class AbsThread extends Thread {
 			try {
 				execute();
 			} catch (Exception ex) {
-				logger.debug(ex);
+				logger.warn(ex);
 			}
 
 			synchronized (schedule) {
 				try {
 					schedule.wait(sleepTime);
 				} catch (Exception ex) {
-					logger.debug(ex);
+					logger.warn(ex);
 				}
 			}
 		}

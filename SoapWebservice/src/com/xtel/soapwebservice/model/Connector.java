@@ -19,7 +19,6 @@ public class Connector {
 	private final String url = configrator.getUrl();
 	private final String user = configrator.getUser();
 	private final String password = configrator.getPassword();
-//	private MyCache cache = MyCache.getInstance();
 	private PreparedStatement ps = null;
 	private Logger logger = new Log().getLogger(Connector.class);
 
@@ -46,7 +45,6 @@ public class Connector {
 			ps.setString(5, schedule.getEmail());
 			ps.setString(6, schedule.getPhone());
 			ps.execute();
-
 		} catch (SQLException e) {
 			logger.warn(e);
 		} finally {
@@ -59,7 +57,7 @@ public class Connector {
 	}
 
 	public Schedule findByCode(String code) {
-		code="812c242f-d10e-415c-ae77-7f2e7818ffcd";
+		code = "812c242f-d10e-415c-ae77-7f2e7818ffcd";
 		Connection con = getConnection();
 		Schedule schedule = null;
 		String sql = "select * from schedule where code = ?";
@@ -69,7 +67,7 @@ public class Connector {
 			ps.setString(1, code);
 
 			ResultSet rs = ps.executeQuery();
-			if(rs==null) {
+			if (rs == null) {
 				return null;
 			}
 			while (rs.next()) {
@@ -78,12 +76,12 @@ public class Connector {
 						rs.getString("phone"));
 			}
 		} catch (SQLException e) {
-			logger.info(e);
+			logger.warn(e);
 		} finally {
 			try {
 				con.close();
 			} catch (SQLException e) {
-				logger.info(e);
+				logger.warn(e);
 			}
 		}
 		return schedule;

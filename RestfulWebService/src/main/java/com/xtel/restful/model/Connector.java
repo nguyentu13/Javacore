@@ -26,7 +26,7 @@ public class Connector {
             conn = DriverManager.getConnection(url, user, password);
 //            System.out.println("Connected!!");
         } catch (SQLException e) {
-            logger.debug(e);
+            logger.warn(e);
         }
         return conn;
     }
@@ -44,13 +44,13 @@ public class Connector {
             }
         }
         catch (Exception ex){
-            logger.debug(ex);
+            logger.warn(ex);
         }
         finally{
             try {
                 conn.close();
             } catch (SQLException e) {
-                logger.debug(e);
+                logger.warn(e);
             }
         }
 

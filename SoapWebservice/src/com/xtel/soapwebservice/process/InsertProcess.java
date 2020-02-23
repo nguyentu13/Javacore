@@ -18,7 +18,7 @@ public class InsertProcess extends AbsThread {
 		try {
 			connector.insertSchedule(schedule);
 		} catch (Exception e) {
-			logger.debug(e);
+			logger.warn(e);
 		}
 	}
 	

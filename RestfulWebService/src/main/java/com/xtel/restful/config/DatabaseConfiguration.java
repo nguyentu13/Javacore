@@ -35,7 +35,7 @@ public class DatabaseConfiguration {
 			dBuilder = dbf.newDocumentBuilder();
 			document = dBuilder.parse(file);
 		} catch (Exception ex) {
-			logger.info(ex);
+			logger.warn(ex);
 		}
 
 		return document.getDocumentElement();

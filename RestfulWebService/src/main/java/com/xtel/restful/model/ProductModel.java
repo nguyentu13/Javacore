@@ -38,12 +38,12 @@ public class ProductModel {
 
 			}
 		} catch (Exception ex) {
-			logger.debug(ex);
+			logger.warn(ex);
 		} finally {
 			try {
 				conn.close();
 			} catch (SQLException e) {
-				logger.debug(e);
+				logger.warn(e);
 			}
 		}
 		return products;
@@ -61,12 +61,12 @@ public class ProductModel {
 
 			}
 		} catch (Exception ex) {
-			logger.debug(ex);
+			logger.warn(ex);
 		} finally {
 			try {
 				this.conn.close();
 			} catch (SQLException e) {
-				logger.debug(e);
+				logger.warn(e);
 			}
 		}
 
@@ -86,12 +86,12 @@ public class ProductModel {
 
 			}
 		} catch (Exception ex) {
-			logger.debug(ex);
+			logger.warn(ex);
 		} finally {
 			try {
 				this.conn.close();
 			} catch (SQLException e) {
-				logger.debug(e);
+				logger.warn(e);
 			}
 		}
 
@@ -116,12 +116,12 @@ public class ProductModel {
 				id = rs.getInt("id");
 			}
 		} catch (Exception ex) {
-			logger.debug(ex);
+			logger.warn(ex);
 		} finally {
 			try {
 				conn.close();
 			} catch (SQLException e) {
-				logger.debug(e);
+				logger.warn(e);
 			}
 		}
 
@@ -139,7 +139,7 @@ public class ProductModel {
 			ps.execute();
 			isSuccess = true;
 		} catch (SQLException e) {
-			logger.debug(e);
+			logger.warn(e);
 		}
 		
 		
@@ -156,13 +156,13 @@ public class ProductModel {
             isSucess = true;
         }
         catch (Exception ex){
-            logger.debug(ex);
+            logger.warn(ex);
         }
         finally {
             try {
                 conn.close();
             } catch (SQLException e) {
-                logger.debug(e);
+                logger.warn(e);
             }
         }
 
@@ -180,12 +180,12 @@ public class ProductModel {
 				numberPage = (int) Math.ceil((double) totalRow / 5);
 			}
 		} catch (Exception ex) {
-			logger.debug(ex);
+			logger.warn(ex);
 		} finally {
 			try {
 				conn.close();
 			} catch (SQLException e) {
-				logger.debug(e);
+				logger.warn(e);
 			}
 		}
 
