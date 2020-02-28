@@ -1,0 +1,5 @@
+package truong.nguyen.spring_boot_api.controller.api_controller;
+
+public class ProductController {
+
+}

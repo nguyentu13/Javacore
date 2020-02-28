@@ -1,0 +1,64 @@
+package com.xtel.vngofl.api.controller.channels.core;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.tbv.utils.textbase.StringUtil;
+import com.tbv.utils.textbase.StringUtils;
+import com.xtel.gamehit.api.controler.base.AbsApiBaseBodyReqTypeCmd;
+import com.xtel.gamehit.api.listener.entities.CmsUser;
+import com.xtel.gamehit.api.listener.request.LoginReq;
+import com.xtel.gamehit.api.listener.response.BaseResp;
+import com.xtel.gamehit.api.listener.response.EnumRsCode;
+import com.xtel.gamehit.api.listener.response.data.CmsLoginCmsData;
+import com.xtel.gamehit.api.model.cmd.DbCmsUserCmsLoginCmd;
+import com.xtel.gamehit.api.security.JWTUtil;
+
+public class UserCmsLoginCmd extends AbsApiBaseBodyReqTypeCmd {
+
+	public UserCmsLoginCmd(HttpServletRequest httpServletRequest, String jsonRequest, Class<?> classRequest) {
+		super(httpServletRequest, jsonRequest, classRequest);
+	}
+
+	@Override
+	protected void executeCmd() throws Exception {
+
+		String ip = httpServletRequest.getHeader("ip");
+		if(StringUtil.isNullOrEmpty(ip)) {
+			ip = httpServletRequest.getRemoteAddr();
+
+			if (httpServletRequest.getHeader("X-Forwarded-For") != null) {
+				ip = httpServletRequest.getHeader("X-Forwarded-For").split(",")[0];
+			}
+		}
+		
+		String username = ((LoginReq) objRequest).getUsername();
+		String password = ((LoginReq) objRequest).getPassword();
+		password = StringUtils.encodeMD5(password);
+
+		DbCmsUserCmsLoginCmd dbCmd = new DbCmsUserCmsLoginCmd(transid, channel, username, password, ip);
+		executeDbCmd(dbCmd);
+
+		if (EnumRsCode.SUCCESS.getCode() == dbCmd.getCode()) {
+			CmsUser userObj = dbCmd.getUser_info();
+			String jsonUserObj = gson.toJson(userObj);
+			JWTUtil jwtObj = new JWTUtil();
+			String token = jwtObj.encode(channel, jsonUserObj);
+			objResponse = new BaseResp(dbCmd.getCode(), dbCmd.getMessage(),
+					new CmsLoginCmsData(token, dbCmd.getUser_info(), dbCmd.getGroup_info(), dbCmd.getPage_infos()));
+			
+			return;
+		}
+
+		objResponse = new BaseResp(dbCmd.getCode(), dbCmd.getMessage());
+	}
+
+	@Override
+	protected boolean validateData() {
+		return true;
+	};
+
+	@Override
+	protected boolean validateToken() {
+		return true;
+	}
+}

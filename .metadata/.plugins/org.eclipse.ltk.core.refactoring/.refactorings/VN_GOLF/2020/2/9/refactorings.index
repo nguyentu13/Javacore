@@ -1,0 +1,41 @@
+1582682830360	Rename package 'com.xtel.vngofl.api.cache'
+1582682858345	Delete element
+1582683094685	Delete element
+1582683100191	Delete element
+1582683152078	Rename package 'com.xtel.gamehit.api.cache.manager'
+1582685346530	Delete element
+1582685469446	Rename package 'com.xtel.vngofl.api.listener.entity'
+1582702588028	Delete elements
+1582702596597	Delete element
+1582702610521	Delete elements
+1582702616675	Delete element
+1582702672868	Delete elements
+1582712439040	Rename package 'com.xtel.vngofl.api'
+1582712481561	Delete element
+1582712502775	Rename package 'com.xtel.vngofl.api.cache'
+1582712522630	Delete element
+1582712572814	Rename package 'com.xtel.vngofl.api.cache.manager'
+1582712585256	Rename package 'com.xtel.vngofl.api.cache.thread'
+1582712600701	Rename package 'com.xtel.vngofl.api.sercurity'
+1582712613748	Rename package 'com.xtel.vngofl.api.model'
+1582712632436	Rename package 'com.xtel.vngofl.api.main'
+1582712655019	Rename package 'com.xtel.vngofl.api.listener.service.cms'
+1582712667083	Rename package 'com.xtel.vngofl.api.listener.service'
+1582712680331	Rename package 'com.xtel.vngofl.api.listener.server'
+1582712690913	Rename package 'com.xtel.vngofl.api.listener.response.data'
+1582712700939	Rename package 'com.xtel.vngofl.api.listener.response'
+1582712713686	Rename package 'com.xtel.vngofl.api.listener.request'
+1582712725269	Rename package 'com.xtel.vngofl.api.listener.filter'
+1582712736671	Rename package 'com.xtel.vngofl.api.listener.entities'
+1582712752793	Rename package 'com.xtel.vngofl.api.controller.channels.provider'
+1582712767853	Rename package 'com.xtel.vngofl.api.controller.channels.core'
+1582712779465	Rename package 'com.xtel.vngofl.api.client'
+1582712789397	Rename package 'com.xtel.vngofl.api.common'
+1582712801579	Rename package 'com.xtel.vngofl.api.common.mail'
+1582712814343	Rename package 'com.xtel.vngofl.api.common.mail.response'
+1582712826696	Rename package 'com.xtel.vngofl.api.common.utils'
+1582712838473	Rename package 'com.xtel.vngofl.api.config'
+1582712851785	Rename package 'com.xtel.vngofl.api.controller.base'
+1582789186464	Delete element
+1582789194324	Delete element
+1582789200924	Delete element

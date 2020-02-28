@@ -1,0 +1,5 @@
+package com.xtel.vngolf.api.model;
+
+public class DbCmsHotelGetListCmd {
+
+}

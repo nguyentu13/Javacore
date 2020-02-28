@@ -1,0 +1,37 @@
+package com.xtel.vngofl.api.listener.service.cms;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Response;
+
+import com.xtel.gamehit.api.controler.channels.core.UserCmsLoginCmd;
+import com.xtel.gamehit.api.listener.request.LoginReq;
+import com.xtel.vngofl.api.controller.channels.core.UserCmsGetListCmd;
+import com.xtel.vngofl.api.listener.service.BaseService;
+
+@Path("cms/user")
+public class UserService extends BaseService{
+	@GET
+	@Path("list")
+	public Response getList(@QueryParam("channel") String channel, @QueryParam("transid") String transid,
+			@QueryParam("page_index") int page_index, @QueryParam("page_size") int page_size,
+			@QueryParam("user_name") String user_name, @QueryParam("full_name") String full_name,
+			@QueryParam("email") String email, @QueryParam("phone") String phone, @QueryParam("address") String address,
+			@QueryParam("unit") String unit, @QueryParam("status") int status,
+			@QueryParam("order_by") String order_by) {
+		UserCmsGetListCmd cmd = new UserCmsGetListCmd(httpServletRequest, channel, transid, page_index, page_size,
+				user_name, full_name, email, phone, address, unit, status, order_by);
+		cmd.execute();
+		return cmd.getResponse();
+	}
+	
+	@POST
+	@Path("login")
+	public Response login(String jsonRequest) {
+		UserCmsLoginCmd cmd = new UserCmsLoginCmd(httpServletRequest, jsonRequest, LoginReq.class);
+		cmd.execute();
+		return cmd.getResponse();
+	}
+}

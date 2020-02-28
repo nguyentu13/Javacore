@@ -1,0 +1,165 @@
+package truong.nguyen.spring_boot_api.connection.database;
+
+import org.apache.log4j.Logger;
+import truong.nguyen.spring_boot_api.log.LogFactory;
+
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class ConnectionPool {
+    private Logger logger = LogFactory.getLogger(ConnectionPool.class);
+
+    private LinkedBlockingQueue<ConnectionT> pool;
+    private int count;
+
+    private int max_pool_size;
+    private int init_pool_size;
+    private int min_pool_size;
+    private long time_out = 10000;
+
+    private String url;
+    private String user;
+    private String password;
+
+    private Thread thread;
+    private long start_time;
+    private long end_time;
+
+    private static ConnectionPool ins;
+
+    private ConnectionPool(){
+    }
+
+    public synchronized static ConnectionPool getInstance(){
+        if(ins == null){
+            ins = new ConnectionPool();
+            ins.start_time = System.currentTimeMillis();
+            ins.max_pool_size = 30;
+            ins.init_pool_size = 10;
+            ins.min_pool_size = 5;
+            ins.time_out = 10000;
+            ins.pool = new LinkedBlockingQueue<>();
+            ins.thread = new AbsThread() {
+
+            @Override
+            protected void execute() {
+                for(ConnectionT connectionWrapper : ins.pool){
+                        if(ins.count>ins.min_pool_size){
+                            if(connectionWrapper.isTimeOut()){
+                                try{
+                                    connectionWrapper.close();
+                                    ins.pool.remove(connectionWrapper);
+                                    ins.count--;
+                                }
+                                catch (Exception ex){
+                                    logger.info(String.format("[error close connection time out]"));
+                                }
+                            }
+                        }
+//                        logger.info(String.format("[Connection pool size : %d] - [All connection : %d]",
+//                                ins.pool.size(),ins.count));
+                    }
+                }
+            };
+        }
+        return ins;
+    }
+
+
+    public ConnectionPool setUrl(String url){
+        this.url = url;
+        return this;
+    }
+
+    public ConnectionPool setUser(String user){
+        this.user = user;
+        return this;
+    }
+
+    public ConnectionPool setPassword(String password){
+        this.password = password;
+        return this;
+    }
+
+    public ConnectionPool setMaxPoolSize(int max_pool_size){
+        this.max_pool_size = max_pool_size;
+        return this;
+    }
+
+    public ConnectionPool setMinPoolSize(int min_pool_size){
+        this.min_pool_size = min_pool_size;
+        return this;
+    }
+
+    public ConnectionPool setInit_pool_size(int init_pool_size){
+        this.init_pool_size = init_pool_size;
+        return this;
+    }
+
+    public ConnectionPool setTimeOut(long time_out){
+        this.time_out = time_out;
+        return this;
+    }
+
+    public synchronized ConnectionT getConnectionT() throws Exception{
+        ConnectionT connectionWrapper = null;
+        if(pool.size() == 0 && count<max_pool_size){
+            ConnectionT newConnectionT = new ConnectionT(url,user,password,time_out);
+            pool.put(newConnectionT);
+            count++;
+        }
+
+        connectionWrapper = pool.take();
+        connectionWrapper.setRelax_time(System.currentTimeMillis());
+        return connectionWrapper;
+    }
+
+    public synchronized void release(ConnectionT connectionT){
+        try{
+            if(connectionT.isClose()){
+                pool.remove(connectionT);
+                ConnectionT conn = new ConnectionT(url,user,password,time_out);
+                pool.put(conn);
+            }
+            else{
+                pool.put(connectionT);
+            }
+        }
+        catch (Exception ex){
+            logger.info(String.format("[Connection : %s] - [Exception : %s]",connectionT.toString(),ex));
+        }
+    }
+
+    public void start(){
+        logger.info(String.format("-----Starting Connection Pool------"));
+        try{
+            for(int i=0;i<init_pool_size;i++){
+                ConnectionT connectionWrapper = new ConnectionT(url,user,password,time_out);
+                pool.put(connectionWrapper);
+                count++;
+            }
+        }
+        catch (Exception ex){
+            logger.warn(String.format("[Message : can not start connection pool] - [Connection pool : %s] - " +
+                    "[Exception : %s]",this.toString(),ex));
+        }
+
+        thread.start();
+        end_time = System.currentTimeMillis();
+        logger.info(String.format("-----Started Connection Pool in %d ms------",end_time-start_time));
+    }
+
+    @Override
+    public String toString() {
+        return "ConnectionPool{" +
+                "pool=" + pool +
+                ", max_pool_size=" + max_pool_size +
+                ", init_pool_size=" + init_pool_size +
+                ", min_pool_size=" + min_pool_size +
+                ", time_out=" + time_out +
+                ", url='" + url + '\'' +
+                ", user='" + user + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
+}

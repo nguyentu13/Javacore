@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Logging/Config&apos; to &apos;config&apos;" description="Rename resource &apos;Config&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Config" name="config" stamp="1577692602302" updateReferences="true"/>
+</session>

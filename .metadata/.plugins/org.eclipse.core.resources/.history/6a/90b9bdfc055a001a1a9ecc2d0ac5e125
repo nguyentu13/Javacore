@@ -1,0 +1,26 @@
+package com.xtel.vngolf.api.model;
+
+import com.tbv.utils.db.cmd.DbCallableCmd;
+
+public class DbCmsHotelGetListCmd extends DbCallableCmd{
+
+	public DbCmsHotelGetListCmd(String transid, String channel) {
+		super(transid, channel);
+	}
+
+	@Override
+	protected void getOutputResult() throws Exception {
+		code = 
+	}	
+
+	@Override
+	protected void setSqlCommand() throws Exception {
+		setProc("hotel_get_list", 1);
+	}
+
+	@Override
+	protected void setSqlParameter() throws Exception {
+		
+	}
+
+}

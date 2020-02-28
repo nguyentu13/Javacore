@@ -1,0 +1,5 @@
+package com.xtel.vngolf.api.listener.service.cms;
+
+public class HotelService {
+
+}

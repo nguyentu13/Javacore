@@ -1,0 +1,27 @@
+1581906563607	Rename type 'Patient'
+1581906603859	Rename type 'PatientService'
+1581906760575	Rename type 'OrderQueue'
+1581907512478	Rename type 'PatientServiceImpl'
+1581911925816	Copy file
+1581911982246	Copy compilation unit
+1581929614743	Rename type 'CaffeineCache'
+1581929631173	Rename type 'Cache'
+1581934985146	Delete element
+1581991641226	Delete element
+1581993561580	Delete element
+1581995966708	Delete element
+1582016718529	Rename package 'com.xtel.webservie.entiy'
+1582016733916	Rename package 'com.xtel.webservice.entiy'
+1582256774400	Rename package 'com.xtel.webservice'
+1582256838894	Delete element
+1582257064089	Rename package 'com.xtel.webservice'
+1582257112503	Delete element
+1582257139355	Rename package 'com.xtel.webservice.cache'
+1582257150192	Rename package 'com.xtel.webservice.config'
+1582257161534	Rename package 'com.xtel.webservice.entity'
+1582257169969	Rename package 'com.xtel.webservice.implement'
+1582257181129	Rename package 'com.xtel.webservice.log'
+1582257191254	Rename package 'com.xtel.webservice.model'
+1582257202274	Rename package 'com.xtel.webservice.process'
+1582257210649	Rename package 'com.xtel.webservice.queue'
+1582257223578	Rename package 'com.xtel.webservice.service'

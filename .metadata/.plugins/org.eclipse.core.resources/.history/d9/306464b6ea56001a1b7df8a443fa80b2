@@ -1,0 +1,64 @@
+package truong.nguyen.spring_boot_api.service;
+
+import org.springframework.stereotype.Service;
+import truong.nguyen.spring_boot_api.connection.database.ConnectionPool;
+import truong.nguyen.spring_boot_api.listener.response.api_response.UserLoginResponse;
+import truong.nguyen.spring_boot_api.repository.UserLoginRepository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+@Service
+public class UserLoginService extends BaseService implements UserLoginRepository {
+    @Override
+    public UserLoginResponse login(String user_name, String password) throws Exception{
+        UserLoginResponse info = null;
+        sql = "select user.full_name,user.user_name,user.birth_day,user.gender,user.email,user.phone,user.address" +
+                ",user.role_id from user where user.user_name = ? and user.password = ?";
+        preparedSql();
+        setString(user_name);
+        setString(password);
+        ResultSet rs = ps.executeQuery();
+
+        try{
+            while (rs.next()){
+                info = new UserLoginResponse();
+                info.setFull_name(rs.getString("full_name"));
+                info.setUser_name(rs.getString("user_name"));
+                info.setBirth_day(rs.getString("birth_day"));
+                info.setGender(rs.getInt("gender"));
+                info.setEmail(rs.getString("email"));
+                info.setPhone(rs.getString("phone"));
+                info.setAddress(rs.getString("address"));
+                info.setRole_id(rs.getInt("role_id"));
+                break;
+            }
+        }
+        finally {
+            if(rs!=null){
+                rs.close();
+            }
+        }
+
+        sql = "select role.role from role where id = ?";
+        preparedSql();
+        setInt(info.getRole_id());
+        ResultSet rs2 = ps.executeQuery();
+
+        if(rs2!=null){
+            try{
+                while(rs2.next()){
+                    info.setRole(rs2.getString("role"));
+                    break;
+                }
+            }
+            finally {
+                rs2.close();
+            }
+        }
+
+        releaseConnection();
+        return info;
+    }
+}

@@ -1,0 +1,91 @@
+package com.xtel.vngofl.api.listener.entities;
+
+import java.util.Date;
+
+public class CmsGroupInfo {
+
+	private int group_id;
+	private String group_name;
+	private String description;
+	private int status;
+	private Date create_time;
+	private String create_by;
+	private Date update_time;
+	private String update_by;
+
+	public CmsGroupInfo() {
+		super();
+	}
+
+	public int getGroup_id() {
+		return group_id;
+	}
+
+	public void setGroup_id(int id) {
+		this.group_id = id;
+	}
+
+	public String getGroup_name() {
+		return group_name;
+	}
+
+	public void setGroup_name(String group_name) {
+		this.group_name = group_name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public Date getCreate_time() {
+		return create_time;
+	}
+
+	public void setCreate_time(Date created_time) {
+		this.create_time = created_time;
+	}
+
+	public String getCreate_by() {
+		return create_by;
+	}
+
+	public void setCreate_by(String created_by) {
+		this.create_by = created_by;
+	}
+
+	public Date getUpdate_time() {
+		return update_time;
+	}
+
+	public void setUpdate_time(Date updated_time) {
+		this.update_time = updated_time;
+	}
+
+	public String getUpdate_by() {
+		return update_by;
+	}
+
+	public void setUpdate_by(String updated_by) {
+		this.update_by = updated_by;
+	}
+
+	@Override
+	public String toString() {
+		return "CmsGroupInfo [group_id=" + group_id + ", group_name=" + group_name + ", description=" + description
+				+ ", status=" + status + ", created_time=" + create_time + ", created_by=" + create_by
+				+ ", updated_time=" + update_time + ", updated_by=" + update_by + "]";
+	}
+
+}

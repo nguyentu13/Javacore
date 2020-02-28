@@ -1,0 +1,27 @@
+package com.xtel.vngofl.api.listener.entities;
+
+import lombok.Data;
+
+@Data
+public class CmsPageInfo {
+	private int id;
+	private String page_name;
+	private String page_url;
+	private String page_icon;
+	private int parent_id;
+	private String role_list;
+	private int menu_index;
+	private int level;
+	private String define_key;
+
+//	ID, PAGE_NAME, PAGE_URL, PAGE_ICON, PARENT_ID, role_list,menu_index, LEVEL
+	public CmsPageInfo() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "CmsPageInfo [id=" + id + ", page_name=" + page_name + ", page_url=" + page_url + ", page_icon="
+				+ page_icon + ", parent_id=" + parent_id + ", role_list=" +role_list+ ", menu_index=" + menu_index + ", level=" + level + "]";
+	}
+}

@@ -1,0 +1,81 @@
+package truong.nguyen.spring_boot_api.service;
+
+import org.springframework.stereotype.Service;
+import truong.nguyen.spring_boot_api.listener.response.BasePagingDataResponse;
+import truong.nguyen.spring_boot_api.model.PageInfo;
+import truong.nguyen.spring_boot_api.model.Product;
+import truong.nguyen.spring_boot_api.repository.ProductRepository;
+
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class ProductService extends BaseService implements ProductRepository {
+    @Override
+    public BasePagingDataResponse getAll(PageInfo pageInfo) throws Exception{
+        BasePagingDataResponse response = new BasePagingDataResponse();
+        List<Product> products = new ArrayList<>();
+
+        sql = "select * from product order by "+pageInfo.getOrder_by()+" "+(pageInfo.isOrder_type()?"ASC":"DESC")+
+        " limit ?,?";
+        preparedSql();
+
+        ps.setInt(1,pageInfo.getPage_index()*pageInfo.getPage_size());
+        ps.setInt(2,pageInfo.getPage_size());
+
+        ResultSet rs = ps.executeQuery();
+        if(rs!=null){
+            try{
+                while (rs.next()){
+                    Product product = new Product();
+                    product.setId(rs.getInt("id"));
+                    product.setImage(rs.getString("image"));
+                    product.setName(rs.getString("name"));
+                    product.setDescription(rs.getString("description"));
+                    product.setRecipe(rs.getString("recipe"));
+                    product.setPrice(rs.getInt("price"));
+                    product.setEnable(rs.getInt("enable")==0?false:true);
+                    product.setCategory_id(rs.getInt("category_id"));
+                    products.add(product);
+                }
+            }
+            finally {
+                rs.close();
+            }
+        }
+
+        int total_record= 0;
+        sql = "select count(id) as count from product";
+        preparedSql();
+        ResultSet rs2 = ps.executeQuery();
+        if(rs2!=null){
+            try{
+                while (rs2.next()){
+                    total_record = rs2.getInt("count");
+                    break;
+                }
+            }
+            finally {
+                rs2.close();
+            }
+        }
+
+        int total_page = (int) Math.ceil((double) total_record/pageInfo.getPage_size());
+
+        releaseConnection();
+
+        response.setPage_index(pageInfo.getPage_index());
+        response.setPage_size(pageInfo.getPage_size());
+        response.setTotal_rows(total_record);
+        response.setTotal_pages(total_page);
+        response.setData(products);
+        return response;
+        
+    }
+
+    @Override
+    public BasePagingDataResponse getAllByCategory(int category_id, PageInfo pageInfo) {
+        return null;
+    }
+}

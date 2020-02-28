@@ -1,0 +1,5 @@
+package com.xtel.vngofl.api.listener.service.cms;
+
+public class HelloWorldService {
+
+}

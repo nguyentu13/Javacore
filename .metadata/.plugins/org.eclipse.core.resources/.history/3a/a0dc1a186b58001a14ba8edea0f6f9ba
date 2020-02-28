@@ -1,0 +1,5 @@
+package com.xtel.vngofl.api.listener.entities;
+
+public class CmsUser {
+
+}

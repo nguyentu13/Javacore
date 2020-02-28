@@ -1,0 +1,5 @@
+package com.xtel.restful.service;
+
+public class UserService {
+
+}

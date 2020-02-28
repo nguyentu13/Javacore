@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;fw&apos; in &apos;edu.fa.BufferedStreamSample.main(...)&apos; to &apos;pw&apos;&#x0D;&#x0A;- Original project: &apos;JavaIO&apos;&#x0D;&#x0A;- Original element: &apos;edu.fa.BufferedStreamSample.main(String[]).fw&apos;&#x0D;&#x0A;- Renamed element: &apos;fw&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;fw&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;edu.fa{BufferedStreamSample.java[BufferedStreamSample~main~\[QString;@fw!335!356!347!348!QPrintWriter;!0!false" name="pw" references="true" stamp="1576159593730" version="1.0"/>
+</session>

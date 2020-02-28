@@ -1,0 +1,203 @@
+package com.xtel.vngofl.api.model;
+
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import com.tbv.utils.db.cmd.DbCallableCmd;
+import com.xtel.gamehit.api.common.utils.AppUtils;
+import com.xtel.gamehit.api.listener.entities.CmsGroupInfo;
+import com.xtel.gamehit.api.listener.entities.CmsPageInfo;
+import com.xtel.gamehit.api.listener.entities.CmsUser;
+
+import oracle.jdbc.OracleTypes;
+
+public class DbCmsUserCmsLoginCmd extends DbCallableCmd {
+
+	private final String username;
+	private final String password;
+	private CmsUser user_info;
+	private CmsGroupInfo group_info;
+	private List<CmsPageInfo> page_infos = new ArrayList<CmsPageInfo>();
+	private String ip;
+
+	public DbCmsUserCmsLoginCmd(String transid, String channel, String username, String password, String ip) {
+		super(transid, channel);
+		this.username = username;
+		this.password = password;
+		this.ip = ip;
+	}
+
+	@Override
+	protected void setSqlCommand() throws Exception {
+		setProc("PKG_USER_CMS.login", 8);
+	}
+
+	@Override
+	protected void setSqlParameter() throws Exception {
+		cst.registerOutParameter(idx++, OracleTypes.INTEGER);
+		cst.registerOutParameter(idx++, OracleTypes.VARCHAR);
+
+		cst.setString(idx++, username);
+		cst.setString(idx++, password);
+		cst.setString(idx++, ip);
+
+		cst.registerOutParameter(idx++, OracleTypes.CURSOR);
+		cst.registerOutParameter(idx++, OracleTypes.CURSOR);
+		cst.registerOutParameter(idx++, OracleTypes.CURSOR);
+	}
+
+	@Override
+	protected void getOutputResult() throws Exception {
+		code = cst.getInt(1);
+		message = cst.getString(2);
+
+		ResultSet rsUser = null;
+		try {
+			rsUser = (ResultSet) cst.getObject(6);
+			if (rsUser != null) {
+				while (rsUser.next()) {
+					int id = rsUser.getInt("id");
+					String user_name = rsUser.getString("user_name");
+					String full_name = rsUser.getString("full_name");
+					Date birthday = rsUser.getDate("birthday");
+					String email = rsUser.getString("email");
+					String phone_int = rsUser.getString("phone_number");
+					String mobile_int = rsUser.getString("mobile_number");
+					int sex = rsUser.getInt("sex");
+					String address = rsUser.getString("address");
+					String unit = rsUser.getString("unit");
+					int status = rsUser.getInt("status");
+//					int is_admin = rsUser.getInt("is_admin");
+					Date create_time = rsUser.getDate("create_time");
+					String create_by = rsUser.getString("create_by");
+					Date update_time = rsUser.getDate("update_time");
+					String update_by = rsUser.getString("update_by");
+					int schedule_id = rsUser.getInt("schedule_id");
+
+					user_info = new CmsUser();
+					user_info.setUser_id(id);
+					user_info.setUser_name(user_name);
+					user_info.setFull_name(full_name);
+					user_info.setBirthday(AppUtils.formatTime(birthday));
+					user_info.setEmail(email);
+					user_info.setPhone_number(phone_int);
+					user_info.setMobile_number(mobile_int);
+					user_info.setSex(sex);
+					user_info.setAddress(address);
+					user_info.setUnit(unit);
+					user_info.setStatus(status);
+					user_info.setCreate_time(AppUtils.formatTime(create_time));
+					user_info.setCreate_by(create_by);
+					user_info.setUpdate_time(update_time);
+					user_info.setUpdate_by(update_by);
+					user_info.setSchedule_id(schedule_id);
+					break;
+				}
+			}
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			if (rsUser != null)
+				rsUser.close();
+		}
+
+		ResultSet rsGrp = null;
+		try {
+			rsGrp = (ResultSet) cst.getObject(7);
+			if (rsGrp != null) {
+				while (rsGrp.next()) {
+					int id = rsGrp.getInt("id");
+					String group_name = rsGrp.getString("group_name");
+					String description = rsGrp.getString("description");
+					int status = rsGrp.getInt("status");
+					Date created_time = rsGrp.getDate("create_time");
+					String created_by = rsGrp.getString("create_by");
+					Date updated_time = rsGrp.getDate("update_time");
+					String updated_by = rsGrp.getString("update_by");
+
+					group_info = new CmsGroupInfo();
+					group_info.setGroup_id(id);
+					group_info.setGroup_name(group_name);
+					group_info.setDescription(description);
+					group_info.setStatus(status);
+					group_info.setCreate_time(created_time);
+					group_info.setCreate_by(created_by);
+					group_info.setUpdate_time(updated_time);
+					group_info.setUpdate_by(updated_by);
+					break;
+				}
+			}
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			if (rsGrp != null)
+				rsGrp.close();
+		}
+
+		ResultSet rsPage = null;
+		try {
+			rsPage = (ResultSet) cst.getObject(8);
+			if (rsPage != null) {
+				while (rsPage.next()) {
+					int id = rsPage.getInt("id");
+					String page_name = rsPage.getString("page_name");
+					String page_url = rsPage.getString("page_url");
+					String page_icon = rsPage.getString("page_icon");
+					int parent_id = rsPage.getInt("parent_id");
+					String role_list = rsPage.getString("role_list");
+					int menu_index = rsPage.getInt("menu_index");
+					int level = rsPage.getInt("level");
+
+					CmsPageInfo page_info = new CmsPageInfo();
+					page_info.setId(id);
+					page_info.setPage_name(page_name);
+					page_info.setPage_url(page_url);
+					page_info.setPage_icon(page_icon);
+					page_info.setParent_id(parent_id);
+					page_info.setRole_list(role_list);
+					page_info.setMenu_index(menu_index);
+					page_info.setLevel(level);
+					page_infos.add(page_info);
+				}
+			}
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			if (rsPage != null)
+				rsPage.close();
+		}
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public CmsUser getUser_info() {
+		return user_info;
+	}
+
+	public CmsGroupInfo getGroup_info() {
+		return group_info;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public List<CmsPageInfo> getPage_infos() {
+		return page_infos;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + ", [username=" + username + ", password=" + "[HIDE]" + ", user_info=" + user_info
+				+ ", group_info=" + group_info + ", page_infos.size="
+				+ (page_infos == null ? "null" : String.valueOf(page_infos.size())) + "]";
+	}
+}

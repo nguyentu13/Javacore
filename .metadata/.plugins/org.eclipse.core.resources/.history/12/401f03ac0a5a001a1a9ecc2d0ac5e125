@@ -1,0 +1,25 @@
+package com.xtel.vngolf.api.controller.channels.core;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd;
+import com.xtel.vngolf.api.model.DbCmsHotelGetListCmd;
+
+public class CmsHotelGetListCmd extends AbsApiBaseParamReqTypeCmd{
+
+	public CmsHotelGetListCmd(HttpServletRequest httpServletRequest, String channel, String transid) {
+		super(httpServletRequest, channel, transid);
+	}
+
+	@Override
+	protected void executeCmd() throws Exception {
+		DbCmsHotelGetListCmd dbCmd = new DbCmsHotelGetListCmd(transid,channel);
+		executeDbCmd(dbCmd);
+		setResponse(dbCmd.getCode(),dbCmd.getMessage());
+	}
+	
+	protected boolean validateToken() {
+		return true;
+	}
+
+}
