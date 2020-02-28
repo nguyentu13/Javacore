@@ -1,5 +1,0 @@
-package com.xtel.vngofl.api.model;
-
-public class DbCmsHelloWorldCmd {
-
-}

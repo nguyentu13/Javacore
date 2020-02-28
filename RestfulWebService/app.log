@@ -1,4 +1,0 @@
-2020-02-11 17:33:38 DEBUG ProductModel:41 - java.sql.SQLSyntaxErrorException: Table 'tu.produc' doesn't exist
-2020-02-11 17:34:21 DEBUG ProductModel:41 - java.sql.SQLSyntaxErrorException: Table 'tu.produc' doesn't exist
-2020-02-11 17:34:23 DEBUG ProductModel:41 - java.sql.SQLSyntaxErrorException: Table 'tu.produc' doesn't exist
-2020-02-17 11:05:35 INFO  DatabaseConfiguration:38 - java.io.FileNotFoundException: C:\Users\DELL\eclipse-workspace\RestfulWebService\resources\database-config.xml (The system cannot find the path specified)

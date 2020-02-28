@@ -1,5 +1,0 @@
-package com.xtel.vngolf.api.controller.channels.core;
-
-public class CmsHotelGetListCmd {
-
-}

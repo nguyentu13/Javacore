@@ -1,7 +1,0 @@
-package truong.nguyen.spring_boot_api.service;
-
-import truong.nguyen.spring_boot_api.repository.UserRepository;
-
-public class UserService extends BaseService implements UserRepository{
-	
-}

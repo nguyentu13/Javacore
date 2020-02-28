@@ -1,5 +1,0 @@
-package com.xtel.vngofl.api.controller.channels.core;
-
-public class CmsHelloWorldCmd {
-
-}
