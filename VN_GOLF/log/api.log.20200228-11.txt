@@ -1,0 +1,923 @@
+INFO [2020-02-28 11:26:10,275] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/init.xml
+INFO [2020-02-28 11:26:10,277] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\init.xml
+INFO [2020-02-28 11:26:10,279] - [AbsConfigUtils.load.98             ] - reload file: ./config/init.xml, lastModified: 0, file.lastModified(): 1526452152605
+INFO [2020-02-28 11:26:10,445] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_CORE_CONFIG_MS = 60000
+INFO [2020-02-28 11:26:10,445] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_MAIL_CONFIG_MS = 10000
+INFO [2020-02-28 11:26:10,458] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/core.xml
+INFO [2020-02-28 11:26:10,458] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\core.xml
+INFO [2020-02-28 11:26:10,459] - [AbsConfigUtils.load.98             ] - reload file: ./config/core.xml, lastModified: 0, file.lastModified(): 1582279943632
+INFO [2020-02-28 11:26:10,480] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: API_PORT = 10000
+INFO [2020-02-28 11:26:10,480] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CONTEXT_PATH = /api
+INFO [2020-02-28 11:26:10,480] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DAY_INPUT_FORMAT = dd-MM-yyyy
+INFO [2020-02-28 11:26:10,481] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_INPUT_FORMAT = dd-MM-yyyy_HH:mm:ss
+INFO [2020-02-28 11:26:10,481] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_OUTPUT_FORMAT = dd/MM/yyyy HH:mm:ss
+INFO [2020-02-28 11:26:10,482] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: TOKEN_LOG_MAX_LENGTH = 50
+INFO [2020-02-28 11:26:10,482] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: RESPONSE_LOG_MAX_LENGTH = 500
+INFO [2020-02-28 11:26:10,483] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: URL_MESSAGE_SENDER_TIMEOUT = 20000
+INFO [2020-02-28 11:26:10,483] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: ORDER_URL_API = http://localhost:10401/api
+INFO [2020-02-28 11:26:10,484] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CARD_URL_API = http://222.252.16.140:10403/card/partner/api
+INFO [2020-02-28 11:26:10,521] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/mail.xml
+INFO [2020-02-28 11:26:10,521] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\mail.xml
+INFO [2020-02-28 11:26:10,521] - [AbsConfigUtils.load.98             ] - reload file: ./config/mail.xml, lastModified: 0, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:26:10,547] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).HOST = smtp.gmail.com
+INFO [2020-02-28 11:26:10,547] - [XMLConfigExt.getInt.74             ] - [1] [MailConfig] property: MAIL(0).PORT = 587
+INFO [2020-02-28 11:26:10,549] - [XMLConfigExt.getBoolean.94         ] - [1] [MailConfig] property: MAIL(0).SSL = false
+INFO [2020-02-28 11:26:10,550] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).PROTOCOL = smtp
+INFO [2020-02-28 11:26:10,550] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROM_PERSONAL = TENHIENTHI
+INFO [2020-02-28 11:26:10,560] - [MailConfig.loadFroms.65            ] - [1] load config size FROMS: 1
+INFO [2020-02-28 11:26:10,561] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).FROM_MAIL(0) = kythuat@xx.vn
+INFO [2020-02-28 11:26:10,561] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).USERNAME(0) = kythuat@xx.vn
+INFO [2020-02-28 11:26:10,562] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).PASSWORD(0) = xxx
+INFO [2020-02-28 11:26:10,571] - [MailConfig.loadFroms.79            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:26:10,572] - [MailConfig.loadFroms.82            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:26:10,573] - [MailConfig.loadFroms.90            ] - [1] load config FROMS: [FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]]
+INFO [2020-02-28 11:26:10,880] - [DBLogicImpl.init.56                ] - Start DBLogic
+INFO [2020-02-28 11:26:10,928] - [MainApplication.start.78           ] - base service package: com.xtel.vngolf.api.listener.service
+INFO [2020-02-28 11:26:11,415] - [CustomizeFilter.init.24            ] - Initializing filter, config: {}org.eclipse.jetty.servlet.FilterHolder$Config@21507a04
+INFO [2020-02-28 11:26:12,624] - [MainApplication.start.86           ] - -----------------------------MODULE IS STARTED SUCCESS!-----------------------------
+DEBUG [2020-02-28 11:26:20,661] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:26:20,669] - [CustomizeFilter.doFilter.30        ] - ===> New request: Request(GET //www.localhost:10000/api/cms/hello_world/user?username=truongnguyen)@214ec0b9
+DEBUG [2020-02-28 11:26:20,968] - [AbsApiBaseParamReqTypeCmd.execute.17] - BEGIN_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null]
+WARN [2020-02-28 11:26:22,353] - [DBLogicImpl$DBJobTaskImp.run.27    ] - DBJob.run():Caught 'org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Unknown database 'itscc')'
+DEBUG [2020-02-28 11:26:22,353] - [DBLogicImpl$DBJobTaskImp.run.33    ] - DBJob.run(): command invoked: DbCmsHelloWorldCmd [username=truongnguyen, result=null]
+DEBUG [2020-02-28 11:26:22,441] - [AbsApiBaseParamReqTypeCmd.execute.43] - END_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null], cmd: com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd [transid=null, channel=null], time: [1473ms,1s,0ds,0m], response: {"error":{"code":-1,"message":"unknown"},"data":null}
+DEBUG [2020-02-28 11:26:30,573] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:26:40,574] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:26:50,575] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:27:00,575] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:27:10,490] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:27:10,574] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:27:20,574] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:27:30,574] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:27:40,575] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:27:50,575] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:28:00,573] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:28:10,492] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:28:10,574] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:28:20,573] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:28:34,665] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/init.xml
+INFO [2020-02-28 11:28:34,668] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\init.xml
+INFO [2020-02-28 11:28:34,670] - [AbsConfigUtils.load.98             ] - reload file: ./config/init.xml, lastModified: 0, file.lastModified(): 1526452152605
+INFO [2020-02-28 11:28:34,826] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_CORE_CONFIG_MS = 60000
+INFO [2020-02-28 11:28:34,827] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_MAIL_CONFIG_MS = 10000
+INFO [2020-02-28 11:28:34,829] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/core.xml
+INFO [2020-02-28 11:28:34,829] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\core.xml
+INFO [2020-02-28 11:28:34,830] - [AbsConfigUtils.load.98             ] - reload file: ./config/core.xml, lastModified: 0, file.lastModified(): 1582279943632
+INFO [2020-02-28 11:28:34,840] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: API_PORT = 10000
+INFO [2020-02-28 11:28:34,840] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CONTEXT_PATH = /api
+INFO [2020-02-28 11:28:34,841] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DAY_INPUT_FORMAT = dd-MM-yyyy
+INFO [2020-02-28 11:28:34,841] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_INPUT_FORMAT = dd-MM-yyyy_HH:mm:ss
+INFO [2020-02-28 11:28:34,841] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_OUTPUT_FORMAT = dd/MM/yyyy HH:mm:ss
+INFO [2020-02-28 11:28:34,842] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: TOKEN_LOG_MAX_LENGTH = 50
+INFO [2020-02-28 11:28:34,842] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: RESPONSE_LOG_MAX_LENGTH = 500
+INFO [2020-02-28 11:28:34,843] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: URL_MESSAGE_SENDER_TIMEOUT = 20000
+INFO [2020-02-28 11:28:34,843] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: ORDER_URL_API = http://localhost:10401/api
+INFO [2020-02-28 11:28:34,843] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CARD_URL_API = http://222.252.16.140:10403/card/partner/api
+INFO [2020-02-28 11:28:34,851] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/mail.xml
+INFO [2020-02-28 11:28:34,851] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\mail.xml
+INFO [2020-02-28 11:28:34,851] - [AbsConfigUtils.load.98             ] - reload file: ./config/mail.xml, lastModified: 0, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:28:34,862] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).HOST = smtp.gmail.com
+INFO [2020-02-28 11:28:34,863] - [XMLConfigExt.getInt.74             ] - [1] [MailConfig] property: MAIL(0).PORT = 587
+INFO [2020-02-28 11:28:34,864] - [XMLConfigExt.getBoolean.94         ] - [1] [MailConfig] property: MAIL(0).SSL = false
+INFO [2020-02-28 11:28:34,865] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).PROTOCOL = smtp
+INFO [2020-02-28 11:28:34,865] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROM_PERSONAL = TENHIENTHI
+INFO [2020-02-28 11:28:34,866] - [MailConfig.loadFroms.65            ] - [1] load config size FROMS: 1
+INFO [2020-02-28 11:28:34,867] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).FROM_MAIL(0) = kythuat@xx.vn
+INFO [2020-02-28 11:28:34,868] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).USERNAME(0) = kythuat@xx.vn
+INFO [2020-02-28 11:28:34,868] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).PASSWORD(0) = xxx
+INFO [2020-02-28 11:28:34,869] - [MailConfig.loadFroms.79            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:28:34,872] - [MailConfig.loadFroms.82            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:28:34,872] - [MailConfig.loadFroms.90            ] - [1] load config FROMS: [FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]]
+INFO [2020-02-28 11:28:35,249] - [DBLogicImpl.init.56                ] - Start DBLogic
+INFO [2020-02-28 11:28:35,261] - [MainApplication.start.78           ] - base service package: com.xtel.vngolf.api.listener.service
+INFO [2020-02-28 11:28:35,721] - [CustomizeFilter.init.24            ] - Initializing filter, config: {}org.eclipse.jetty.servlet.FilterHolder$Config@21507a04
+INFO [2020-02-28 11:28:36,938] - [MainApplication.start.86           ] - -----------------------------MODULE IS STARTED SUCCESS!-----------------------------
+INFO [2020-02-28 11:28:41,863] - [CustomizeFilter.doFilter.30        ] - ===> New request: Request(GET //www.localhost:10000/api/cms/hello_world/user?username=truongnguyen)@6c49274d
+DEBUG [2020-02-28 11:28:42,104] - [AbsApiBaseParamReqTypeCmd.execute.17] - BEGIN_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null]
+DEBUG [2020-02-28 11:28:43,497] - [DbCallableCmd.invoke.35            ] - transid: null, channel: null, sqlCommand: {CALL HELLO_WORLD(?,?,?,?)}
+ERROR [2020-02-28 11:28:43,641] - [DbCallableCmd.invoke.50            ] - [qtp1418385211-18] transid: null, channel: null
+java.sql.SQLException: Parameter number 1 is not an OUT parameter
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.CallableStatement.checkIsOutputParam(CallableStatement.java:642)
+	at com.mysql.cj.jdbc.CallableStatement.registerOutParameter(CallableStatement.java:1711)
+	at com.mysql.cj.jdbc.CallableStatement.registerOutParameter(CallableStatement.java:1719)
+	at org.apache.commons.dbcp.DelegatingCallableStatement.registerOutParameter(DelegatingCallableStatement.java:94)
+	at com.xtel.vngolf.api.model.DbCmsHelloWorldCmd.setSqlParameter(DbCmsHelloWorldCmd.java:33)
+	at com.tbv.utils.db.cmd.DbCallableCmd.invoke(DbCallableCmd.java:40)
+	at com.tbv.utils.db.spi.DBLogicImpl$DBJobTaskImp.run(DBLogicImpl.java:23)
+	at com.tbv.utils.concurrent.DirectExecutorService.execute(DirectExecutorService.java:19)
+	at com.tbv.utils.db.spi.DBLogicImpl.executeCommand(DBLogicImpl.java:83)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseCmd.executeDbCmd(AbsApiBaseCmd.java:164)
+	at com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd.executeCmd(CmsHelloWorldCmd.java:22)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd.execute(AbsApiBaseParamReqTypeCmd.java:34)
+	at com.xtel.vngolf.api.listener.service.cms.HelloWorldService.helloWorld(HelloWorldService.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:760)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at com.xtel.vngolf.api.listener.filter.CustomizeFilter.doFilter(CustomizeFilter.java:32)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Unknown Source)
+WARN [2020-02-28 11:28:43,643] - [DBLogicImpl$DBJobTaskImp.run.27    ] - DBJob.run():Caught 'java.sql.SQLException: Parameter number 1 is not an OUT parameter'
+DEBUG [2020-02-28 11:28:43,643] - [DBLogicImpl$DBJobTaskImp.run.33    ] - DBJob.run(): command invoked: DbCmsHelloWorldCmd [username=truongnguyen, result=null]
+DEBUG [2020-02-28 11:28:43,674] - [AbsApiBaseParamReqTypeCmd.execute.43] - END_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null], cmd: com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd [transid=null, channel=null], time: [1569ms,1s,0ds,0m], response: {"error":{"code":999,"message":"Parameter number 1 is not an OUT parameter"},"data":null}
+DEBUG [2020-02-28 11:28:44,875] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:28:54,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:29:04,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:29:14,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:29:24,875] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:29:34,850] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:29:34,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:29:44,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:29:54,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:30:04,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:30:14,872] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:30:24,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:30:34,850] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:30:34,875] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:30:44,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:30:54,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:31:04,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:31:14,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:31:24,872] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:31:34,850] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:31:34,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:31:44,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:31:54,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:32:04,872] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:32:14,872] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:32:24,872] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:32:34,850] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:32:34,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:32:44,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:32:54,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:33:04,872] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:33:14,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:33:24,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:33:34,850] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:33:34,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:33:44,872] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:33:54,872] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:34:04,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:34:14,889] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:34:24,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:34:34,851] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:34:34,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:34:44,872] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:34:54,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:35:04,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:35:14,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:35:24,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:35:34,850] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:35:34,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:35:44,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:35:54,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:36:04,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:36:14,873] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:36:24,875] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:36:34,850] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:36:34,874] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:36:41,642] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/init.xml
+INFO [2020-02-28 11:36:41,645] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\init.xml
+INFO [2020-02-28 11:36:41,646] - [AbsConfigUtils.load.98             ] - reload file: ./config/init.xml, lastModified: 0, file.lastModified(): 1526452152605
+INFO [2020-02-28 11:36:41,792] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_CORE_CONFIG_MS = 60000
+INFO [2020-02-28 11:36:41,792] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_MAIL_CONFIG_MS = 10000
+INFO [2020-02-28 11:36:41,793] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/core.xml
+INFO [2020-02-28 11:36:41,794] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\core.xml
+INFO [2020-02-28 11:36:41,795] - [AbsConfigUtils.load.98             ] - reload file: ./config/core.xml, lastModified: 0, file.lastModified(): 1582279943632
+INFO [2020-02-28 11:36:41,803] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: API_PORT = 10000
+INFO [2020-02-28 11:36:41,804] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CONTEXT_PATH = /api
+INFO [2020-02-28 11:36:41,804] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DAY_INPUT_FORMAT = dd-MM-yyyy
+INFO [2020-02-28 11:36:41,804] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_INPUT_FORMAT = dd-MM-yyyy_HH:mm:ss
+INFO [2020-02-28 11:36:41,804] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_OUTPUT_FORMAT = dd/MM/yyyy HH:mm:ss
+INFO [2020-02-28 11:36:41,805] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: TOKEN_LOG_MAX_LENGTH = 50
+INFO [2020-02-28 11:36:41,805] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: RESPONSE_LOG_MAX_LENGTH = 500
+INFO [2020-02-28 11:36:41,805] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: URL_MESSAGE_SENDER_TIMEOUT = 20000
+INFO [2020-02-28 11:36:41,806] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: ORDER_URL_API = http://localhost:10401/api
+INFO [2020-02-28 11:36:41,806] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CARD_URL_API = http://222.252.16.140:10403/card/partner/api
+INFO [2020-02-28 11:36:41,812] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/mail.xml
+INFO [2020-02-28 11:36:41,812] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\mail.xml
+INFO [2020-02-28 11:36:41,812] - [AbsConfigUtils.load.98             ] - reload file: ./config/mail.xml, lastModified: 0, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:36:41,821] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).HOST = smtp.gmail.com
+INFO [2020-02-28 11:36:41,821] - [XMLConfigExt.getInt.74             ] - [1] [MailConfig] property: MAIL(0).PORT = 587
+INFO [2020-02-28 11:36:41,823] - [XMLConfigExt.getBoolean.94         ] - [1] [MailConfig] property: MAIL(0).SSL = false
+INFO [2020-02-28 11:36:41,824] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).PROTOCOL = smtp
+INFO [2020-02-28 11:36:41,824] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROM_PERSONAL = TENHIENTHI
+INFO [2020-02-28 11:36:41,826] - [MailConfig.loadFroms.65            ] - [1] load config size FROMS: 1
+INFO [2020-02-28 11:36:41,826] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).FROM_MAIL(0) = kythuat@xx.vn
+INFO [2020-02-28 11:36:41,827] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).USERNAME(0) = kythuat@xx.vn
+INFO [2020-02-28 11:36:41,828] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).PASSWORD(0) = xxx
+INFO [2020-02-28 11:36:41,829] - [MailConfig.loadFroms.79            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:36:41,830] - [MailConfig.loadFroms.82            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:36:41,830] - [MailConfig.loadFroms.90            ] - [1] load config FROMS: [FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]]
+INFO [2020-02-28 11:36:42,165] - [DBLogicImpl.init.56                ] - Start DBLogic
+INFO [2020-02-28 11:36:42,178] - [MainApplication.start.78           ] - base service package: com.xtel.vngolf.api.listener.service
+INFO [2020-02-28 11:36:42,591] - [CustomizeFilter.init.24            ] - Initializing filter, config: {}org.eclipse.jetty.servlet.FilterHolder$Config@21507a04
+INFO [2020-02-28 11:36:43,755] - [MainApplication.start.86           ] - -----------------------------MODULE IS STARTED SUCCESS!-----------------------------
+DEBUG [2020-02-28 11:36:51,833] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:36:54,661] - [CustomizeFilter.doFilter.30        ] - ===> New request: Request(GET //www.localhost:10000/api/cms/hello_world/user?username=truongnguyen)@637d3482
+DEBUG [2020-02-28 11:36:54,843] - [AbsApiBaseParamReqTypeCmd.execute.17] - BEGIN_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null]
+DEBUG [2020-02-28 11:36:56,063] - [DbCallableCmd.invoke.35            ] - transid: null, channel: null, sqlCommand: {CALL HELLO_WORLD(?,?,?,?)}
+ERROR [2020-02-28 11:36:56,167] - [DbCallableCmd.invoke.50            ] - [qtp1418385211-19] transid: null, channel: null
+java.sql.SQLException: Parameter number 1 is not an OUT parameter
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.CallableStatement.checkIsOutputParam(CallableStatement.java:642)
+	at com.mysql.cj.jdbc.CallableStatement.registerOutParameter(CallableStatement.java:1711)
+	at com.mysql.cj.jdbc.CallableStatement.registerOutParameter(CallableStatement.java:1719)
+	at org.apache.commons.dbcp.DelegatingCallableStatement.registerOutParameter(DelegatingCallableStatement.java:94)
+	at com.xtel.vngolf.api.model.DbCmsHelloWorldCmd.setSqlParameter(DbCmsHelloWorldCmd.java:33)
+	at com.tbv.utils.db.cmd.DbCallableCmd.invoke(DbCallableCmd.java:40)
+	at com.tbv.utils.db.spi.DBLogicImpl$DBJobTaskImp.run(DBLogicImpl.java:23)
+	at com.tbv.utils.concurrent.DirectExecutorService.execute(DirectExecutorService.java:19)
+	at com.tbv.utils.db.spi.DBLogicImpl.executeCommand(DBLogicImpl.java:83)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseCmd.executeDbCmd(AbsApiBaseCmd.java:164)
+	at com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd.executeCmd(CmsHelloWorldCmd.java:22)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd.execute(AbsApiBaseParamReqTypeCmd.java:34)
+	at com.xtel.vngolf.api.listener.service.cms.HelloWorldService.helloWorld(HelloWorldService.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:760)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at com.xtel.vngolf.api.listener.filter.CustomizeFilter.doFilter(CustomizeFilter.java:32)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Unknown Source)
+WARN [2020-02-28 11:36:56,168] - [DBLogicImpl$DBJobTaskImp.run.27    ] - DBJob.run():Caught 'java.sql.SQLException: Parameter number 1 is not an OUT parameter'
+DEBUG [2020-02-28 11:36:56,168] - [DBLogicImpl$DBJobTaskImp.run.33    ] - DBJob.run(): command invoked: DbCmsHelloWorldCmd [username=truongnguyen, result=null]
+DEBUG [2020-02-28 11:36:56,195] - [AbsApiBaseParamReqTypeCmd.execute.43] - END_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null], cmd: com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd [transid=null, channel=null], time: [1352ms,1s,0ds,0m], response: {"error":{"code":999,"message":"Parameter number 1 is not an OUT parameter"},"data":null}
+DEBUG [2020-02-28 11:37:01,833] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:37:11,832] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:37:21,833] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:37:31,832] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:37:41,812] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:37:41,833] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:37:51,833] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:41:58,334] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/init.xml
+INFO [2020-02-28 11:41:58,336] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\init.xml
+INFO [2020-02-28 11:41:58,338] - [AbsConfigUtils.load.98             ] - reload file: ./config/init.xml, lastModified: 0, file.lastModified(): 1526452152605
+INFO [2020-02-28 11:41:58,515] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_CORE_CONFIG_MS = 60000
+INFO [2020-02-28 11:41:58,516] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_MAIL_CONFIG_MS = 10000
+INFO [2020-02-28 11:41:58,518] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/core.xml
+INFO [2020-02-28 11:41:58,519] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\core.xml
+INFO [2020-02-28 11:41:58,520] - [AbsConfigUtils.load.98             ] - reload file: ./config/core.xml, lastModified: 0, file.lastModified(): 1582279943632
+INFO [2020-02-28 11:41:58,535] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: API_PORT = 10000
+INFO [2020-02-28 11:41:58,536] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CONTEXT_PATH = /api
+INFO [2020-02-28 11:41:58,536] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DAY_INPUT_FORMAT = dd-MM-yyyy
+INFO [2020-02-28 11:41:58,536] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_INPUT_FORMAT = dd-MM-yyyy_HH:mm:ss
+INFO [2020-02-28 11:41:58,537] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_OUTPUT_FORMAT = dd/MM/yyyy HH:mm:ss
+INFO [2020-02-28 11:41:58,537] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: TOKEN_LOG_MAX_LENGTH = 50
+INFO [2020-02-28 11:41:58,539] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: RESPONSE_LOG_MAX_LENGTH = 500
+INFO [2020-02-28 11:41:58,539] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: URL_MESSAGE_SENDER_TIMEOUT = 20000
+INFO [2020-02-28 11:41:58,540] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: ORDER_URL_API = http://localhost:10401/api
+INFO [2020-02-28 11:41:58,540] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CARD_URL_API = http://222.252.16.140:10403/card/partner/api
+INFO [2020-02-28 11:41:58,550] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/mail.xml
+INFO [2020-02-28 11:41:58,550] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\mail.xml
+INFO [2020-02-28 11:41:58,550] - [AbsConfigUtils.load.98             ] - reload file: ./config/mail.xml, lastModified: 0, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:41:58,564] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).HOST = smtp.gmail.com
+INFO [2020-02-28 11:41:58,565] - [XMLConfigExt.getInt.74             ] - [1] [MailConfig] property: MAIL(0).PORT = 587
+INFO [2020-02-28 11:41:58,567] - [XMLConfigExt.getBoolean.94         ] - [1] [MailConfig] property: MAIL(0).SSL = false
+INFO [2020-02-28 11:41:58,568] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).PROTOCOL = smtp
+INFO [2020-02-28 11:41:58,568] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROM_PERSONAL = TENHIENTHI
+INFO [2020-02-28 11:41:58,570] - [MailConfig.loadFroms.65            ] - [1] load config size FROMS: 1
+INFO [2020-02-28 11:41:58,571] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).FROM_MAIL(0) = kythuat@xx.vn
+INFO [2020-02-28 11:41:58,572] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).USERNAME(0) = kythuat@xx.vn
+INFO [2020-02-28 11:41:58,572] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).PASSWORD(0) = xxx
+INFO [2020-02-28 11:41:58,573] - [MailConfig.loadFroms.79            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:41:58,575] - [MailConfig.loadFroms.82            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:41:58,575] - [MailConfig.loadFroms.90            ] - [1] load config FROMS: [FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]]
+INFO [2020-02-28 11:41:58,904] - [DBLogicImpl.init.56                ] - Start DBLogic
+INFO [2020-02-28 11:41:58,918] - [MainApplication.start.78           ] - base service package: com.xtel.vngolf.api.listener.service
+INFO [2020-02-28 11:41:59,353] - [CustomizeFilter.init.24            ] - Initializing filter, config: {}org.eclipse.jetty.servlet.FilterHolder$Config@21507a04
+INFO [2020-02-28 11:42:00,671] - [MainApplication.start.86           ] - -----------------------------MODULE IS STARTED SUCCESS!-----------------------------
+DEBUG [2020-02-28 11:42:08,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:42:12,054] - [CustomizeFilter.doFilter.30        ] - ===> New request: Request(GET //www.localhost:10000/api/cms/hello_world/user?username=truongnguyen)@4b4f9f48
+DEBUG [2020-02-28 11:42:12,282] - [AbsApiBaseParamReqTypeCmd.execute.17] - BEGIN_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null]
+DEBUG [2020-02-28 11:42:13,532] - [DbCallableCmd.invoke.35            ] - transid: null, channel: null, sqlCommand: {CALL HELLO_WORLD(?,?,?,?)}
+ERROR [2020-02-28 11:42:13,659] - [DbCallableCmd.invoke.50            ] - [qtp1418385211-18] transid: null, channel: null
+java.sql.SQLSyntaxErrorException: Unknown column 'SUCCESS' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.mysql.cj.jdbc.CallableStatement.execute(CallableStatement.java:842)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:169)
+	at com.tbv.utils.db.cmd.DbCallableCmd.invoke(DbCallableCmd.java:42)
+	at com.tbv.utils.db.spi.DBLogicImpl$DBJobTaskImp.run(DBLogicImpl.java:23)
+	at com.tbv.utils.concurrent.DirectExecutorService.execute(DirectExecutorService.java:19)
+	at com.tbv.utils.db.spi.DBLogicImpl.executeCommand(DBLogicImpl.java:83)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseCmd.executeDbCmd(AbsApiBaseCmd.java:164)
+	at com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd.executeCmd(CmsHelloWorldCmd.java:22)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd.execute(AbsApiBaseParamReqTypeCmd.java:34)
+	at com.xtel.vngolf.api.listener.service.cms.HelloWorldService.helloWorld(HelloWorldService.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:760)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at com.xtel.vngolf.api.listener.filter.CustomizeFilter.doFilter(CustomizeFilter.java:32)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Unknown Source)
+WARN [2020-02-28 11:42:13,661] - [DBLogicImpl$DBJobTaskImp.run.27    ] - DBJob.run():Caught 'java.sql.SQLSyntaxErrorException: Unknown column 'SUCCESS' in 'field list''
+DEBUG [2020-02-28 11:42:13,661] - [DBLogicImpl$DBJobTaskImp.run.33    ] - DBJob.run(): command invoked: DbCmsHelloWorldCmd [username=truongnguyen, result=null]
+DEBUG [2020-02-28 11:42:13,697] - [AbsApiBaseParamReqTypeCmd.execute.43] - END_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null], cmd: com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd [transid=null, channel=null], time: [1414ms,1s,0ds,0m], response: {"error":{"code":999,"message":"Unknown column \u0027SUCCESS\u0027 in \u0027field list\u0027"},"data":null}
+DEBUG [2020-02-28 11:42:18,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:42:28,579] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:42:38,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:42:48,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:42:58,551] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:42:58,579] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:43:08,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:43:18,577] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:43:28,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:43:38,577] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:43:48,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:43:58,549] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:43:58,577] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:44:08,577] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:44:18,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:44:28,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:44:38,577] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:44:48,578] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:44:58,549] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:44:58,576] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:45:10,093] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/init.xml
+INFO [2020-02-28 11:45:10,095] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\init.xml
+INFO [2020-02-28 11:45:10,097] - [AbsConfigUtils.load.98             ] - reload file: ./config/init.xml, lastModified: 0, file.lastModified(): 1526452152605
+INFO [2020-02-28 11:45:10,243] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_CORE_CONFIG_MS = 60000
+INFO [2020-02-28 11:45:10,243] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_MAIL_CONFIG_MS = 10000
+INFO [2020-02-28 11:45:10,244] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/core.xml
+INFO [2020-02-28 11:45:10,244] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\core.xml
+INFO [2020-02-28 11:45:10,245] - [AbsConfigUtils.load.98             ] - reload file: ./config/core.xml, lastModified: 0, file.lastModified(): 1582279943632
+INFO [2020-02-28 11:45:10,254] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: API_PORT = 10000
+INFO [2020-02-28 11:45:10,254] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CONTEXT_PATH = /api
+INFO [2020-02-28 11:45:10,255] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DAY_INPUT_FORMAT = dd-MM-yyyy
+INFO [2020-02-28 11:45:10,255] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_INPUT_FORMAT = dd-MM-yyyy_HH:mm:ss
+INFO [2020-02-28 11:45:10,256] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_OUTPUT_FORMAT = dd/MM/yyyy HH:mm:ss
+INFO [2020-02-28 11:45:10,257] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: TOKEN_LOG_MAX_LENGTH = 50
+INFO [2020-02-28 11:45:10,257] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: RESPONSE_LOG_MAX_LENGTH = 500
+INFO [2020-02-28 11:45:10,259] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: URL_MESSAGE_SENDER_TIMEOUT = 20000
+INFO [2020-02-28 11:45:10,260] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: ORDER_URL_API = http://localhost:10401/api
+INFO [2020-02-28 11:45:10,261] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CARD_URL_API = http://222.252.16.140:10403/card/partner/api
+INFO [2020-02-28 11:45:10,268] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/mail.xml
+INFO [2020-02-28 11:45:10,269] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\mail.xml
+INFO [2020-02-28 11:45:10,270] - [AbsConfigUtils.load.98             ] - reload file: ./config/mail.xml, lastModified: 0, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:45:10,286] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).HOST = smtp.gmail.com
+INFO [2020-02-28 11:45:10,286] - [XMLConfigExt.getInt.74             ] - [1] [MailConfig] property: MAIL(0).PORT = 587
+INFO [2020-02-28 11:45:10,288] - [XMLConfigExt.getBoolean.94         ] - [1] [MailConfig] property: MAIL(0).SSL = false
+INFO [2020-02-28 11:45:10,288] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).PROTOCOL = smtp
+INFO [2020-02-28 11:45:10,289] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROM_PERSONAL = TENHIENTHI
+INFO [2020-02-28 11:45:10,290] - [MailConfig.loadFroms.65            ] - [1] load config size FROMS: 1
+INFO [2020-02-28 11:45:10,291] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).FROM_MAIL(0) = kythuat@xx.vn
+INFO [2020-02-28 11:45:10,293] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).USERNAME(0) = kythuat@xx.vn
+INFO [2020-02-28 11:45:10,296] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).PASSWORD(0) = xxx
+INFO [2020-02-28 11:45:10,297] - [MailConfig.loadFroms.79            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:45:10,299] - [MailConfig.loadFroms.82            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 11:45:10,300] - [MailConfig.loadFroms.90            ] - [1] load config FROMS: [FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]]
+INFO [2020-02-28 11:45:10,733] - [DBLogicImpl.init.56                ] - Start DBLogic
+INFO [2020-02-28 11:45:10,746] - [MainApplication.start.78           ] - base service package: com.xtel.vngolf.api.listener.service
+INFO [2020-02-28 11:45:11,161] - [CustomizeFilter.init.24            ] - Initializing filter, config: {}org.eclipse.jetty.servlet.FilterHolder$Config@21507a04
+INFO [2020-02-28 11:45:12,321] - [MainApplication.start.86           ] - -----------------------------MODULE IS STARTED SUCCESS!-----------------------------
+DEBUG [2020-02-28 11:45:20,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:45:30,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:45:32,535] - [CustomizeFilter.doFilter.30        ] - ===> New request: Request(GET //www.localhost:10000/api/cms/hello_world/user?username=truongnguyen)@3bf086a
+DEBUG [2020-02-28 11:45:32,752] - [AbsApiBaseParamReqTypeCmd.execute.17] - BEGIN_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null]
+DEBUG [2020-02-28 11:45:34,061] - [DbCallableCmd.invoke.35            ] - transid: null, channel: null, sqlCommand: {CALL HELLO_WORLD(?,?,?,?)}
+ERROR [2020-02-28 11:45:34,150] - [DbCallableCmd.invoke.50            ] - [qtp1418385211-22] transid: null, channel: null
+java.sql.SQLFeatureNotSupportedException: registerOutParameter not implemented
+	at java.sql.CallableStatement.registerOutParameter(Unknown Source)
+	at com.xtel.vngolf.api.model.DbCmsHelloWorldCmd.setSqlParameter(DbCmsHelloWorldCmd.java:33)
+	at com.tbv.utils.db.cmd.DbCallableCmd.invoke(DbCallableCmd.java:40)
+	at com.tbv.utils.db.spi.DBLogicImpl$DBJobTaskImp.run(DBLogicImpl.java:23)
+	at com.tbv.utils.concurrent.DirectExecutorService.execute(DirectExecutorService.java:19)
+	at com.tbv.utils.db.spi.DBLogicImpl.executeCommand(DBLogicImpl.java:83)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseCmd.executeDbCmd(AbsApiBaseCmd.java:164)
+	at com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd.executeCmd(CmsHelloWorldCmd.java:22)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd.execute(AbsApiBaseParamReqTypeCmd.java:34)
+	at com.xtel.vngolf.api.listener.service.cms.HelloWorldService.helloWorld(HelloWorldService.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:760)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at com.xtel.vngolf.api.listener.filter.CustomizeFilter.doFilter(CustomizeFilter.java:32)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Unknown Source)
+WARN [2020-02-28 11:45:34,152] - [DBLogicImpl$DBJobTaskImp.run.27    ] - DBJob.run():Caught 'java.sql.SQLFeatureNotSupportedException: registerOutParameter not implemented'
+DEBUG [2020-02-28 11:45:34,152] - [DBLogicImpl$DBJobTaskImp.run.33    ] - DBJob.run(): command invoked: DbCmsHelloWorldCmd [username=truongnguyen, result=null]
+DEBUG [2020-02-28 11:45:34,179] - [AbsApiBaseParamReqTypeCmd.execute.43] - END_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null], cmd: com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd [transid=null, channel=null], time: [1427ms,1s,0ds,0m], response: {"error":{"code":999,"message":"registerOutParameter not implemented"},"data":null}
+DEBUG [2020-02-28 11:45:40,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:45:50,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:46:00,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:46:10,270] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:46:10,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:46:20,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:46:30,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:46:40,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:46:50,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:47:00,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:47:10,268] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:47:10,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:47:20,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:47:30,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:47:40,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:47:50,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:48:00,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:48:10,268] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:48:10,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:48:20,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:48:30,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:48:40,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:48:50,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:49:00,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:49:10,267] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:49:10,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:49:20,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:49:30,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:49:40,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:49:50,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:50:00,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:50:10,267] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:50:10,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:50:20,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:50:30,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:50:40,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:50:40,401] - [CustomizeFilter.doFilter.30        ] - ===> New request: Request(GET //www.localhost:10000/api/cms/hello_world/user?username=truongnguyen)@9ed6e15
+DEBUG [2020-02-28 11:50:40,404] - [AbsApiBaseParamReqTypeCmd.execute.17] - BEGIN_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null]
+DEBUG [2020-02-28 11:50:40,407] - [DbCallableCmd.invoke.35            ] - transid: null, channel: null, sqlCommand: {CALL HELLO_WORLD(?,?,?,?)}
+ERROR [2020-02-28 11:50:40,420] - [DbCallableCmd.invoke.50            ] - [qtp1418385211-20] transid: null, channel: null
+java.sql.SQLFeatureNotSupportedException: registerOutParameter not implemented
+	at java.sql.CallableStatement.registerOutParameter(Unknown Source)
+	at com.xtel.vngolf.api.model.DbCmsHelloWorldCmd.setSqlParameter(DbCmsHelloWorldCmd.java:33)
+	at com.tbv.utils.db.cmd.DbCallableCmd.invoke(DbCallableCmd.java:40)
+	at com.tbv.utils.db.spi.DBLogicImpl$DBJobTaskImp.run(DBLogicImpl.java:23)
+	at com.tbv.utils.concurrent.DirectExecutorService.execute(DirectExecutorService.java:19)
+	at com.tbv.utils.db.spi.DBLogicImpl.executeCommand(DBLogicImpl.java:83)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseCmd.executeDbCmd(AbsApiBaseCmd.java:164)
+	at com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd.executeCmd(CmsHelloWorldCmd.java:22)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd.execute(AbsApiBaseParamReqTypeCmd.java:34)
+	at com.xtel.vngolf.api.listener.service.cms.HelloWorldService.helloWorld(HelloWorldService.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:760)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at com.xtel.vngolf.api.listener.filter.CustomizeFilter.doFilter(CustomizeFilter.java:32)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:388)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Unknown Source)
+WARN [2020-02-28 11:50:40,421] - [DBLogicImpl$DBJobTaskImp.run.27    ] - DBJob.run():Caught 'java.sql.SQLFeatureNotSupportedException: registerOutParameter not implemented'
+DEBUG [2020-02-28 11:50:40,421] - [DBLogicImpl$DBJobTaskImp.run.33    ] - DBJob.run(): command invoked: DbCmsHelloWorldCmd [username=truongnguyen, result=null]
+DEBUG [2020-02-28 11:50:40,425] - [AbsApiBaseParamReqTypeCmd.execute.43] - END_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null], cmd: com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd [transid=null, channel=null], time: [21ms,0s,0ds,0m], response: {"error":{"code":999,"message":"registerOutParameter not implemented"},"data":null}
+DEBUG [2020-02-28 11:50:50,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:51:00,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:51:10,268] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:51:10,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:51:20,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:51:30,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:51:40,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:51:50,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:52:00,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:52:10,268] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:52:10,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:52:20,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:52:30,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:52:33,592] - [CustomizeFilter.doFilter.30        ] - ===> New request: Request(GET //www.localhost:10000/api/cms/hello_world/user?username=truongnguyen)@48d0642e
+DEBUG [2020-02-28 11:52:33,596] - [AbsApiBaseParamReqTypeCmd.execute.17] - BEGIN_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null]
+DEBUG [2020-02-28 11:52:33,599] - [DbCallableCmd.invoke.35            ] - transid: null, channel: null, sqlCommand: {CALL HELLO_WORLD(?,?,?,?)}
+ERROR [2020-02-28 11:52:33,609] - [DbCallableCmd.invoke.50            ] - [qtp1418385211-20] transid: null, channel: null
+java.sql.SQLFeatureNotSupportedException: registerOutParameter not implemented
+	at java.sql.CallableStatement.registerOutParameter(Unknown Source)
+	at com.xtel.vngolf.api.model.DbCmsHelloWorldCmd.setSqlParameter(DbCmsHelloWorldCmd.java:33)
+	at com.tbv.utils.db.cmd.DbCallableCmd.invoke(DbCallableCmd.java:40)
+	at com.tbv.utils.db.spi.DBLogicImpl$DBJobTaskImp.run(DBLogicImpl.java:23)
+	at com.tbv.utils.concurrent.DirectExecutorService.execute(DirectExecutorService.java:19)
+	at com.tbv.utils.db.spi.DBLogicImpl.executeCommand(DBLogicImpl.java:83)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseCmd.executeDbCmd(AbsApiBaseCmd.java:164)
+	at com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd.executeCmd(CmsHelloWorldCmd.java:22)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd.execute(AbsApiBaseParamReqTypeCmd.java:34)
+	at com.xtel.vngolf.api.listener.service.cms.HelloWorldService.helloWorld(HelloWorldService.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:760)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at com.xtel.vngolf.api.listener.filter.CustomizeFilter.doFilter(CustomizeFilter.java:32)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:388)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Unknown Source)
+WARN [2020-02-28 11:52:33,610] - [DBLogicImpl$DBJobTaskImp.run.27    ] - DBJob.run():Caught 'java.sql.SQLFeatureNotSupportedException: registerOutParameter not implemented'
+DEBUG [2020-02-28 11:52:33,610] - [DBLogicImpl$DBJobTaskImp.run.33    ] - DBJob.run(): command invoked: DbCmsHelloWorldCmd [username=truongnguyen, result=null]
+DEBUG [2020-02-28 11:52:33,613] - [AbsApiBaseParamReqTypeCmd.execute.43] - END_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null], cmd: com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd [transid=null, channel=null], time: [17ms,0s,0ds,0m], response: {"error":{"code":999,"message":"registerOutParameter not implemented"},"data":null}
+DEBUG [2020-02-28 11:52:40,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:52:50,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:53:00,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:53:10,267] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:53:10,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:53:20,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:53:30,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:53:40,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:53:50,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:54:00,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:54:10,269] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:54:10,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:54:20,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:54:30,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:54:40,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:54:50,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:55:00,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:55:10,267] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:55:10,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:55:20,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:55:30,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:55:40,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:55:50,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:56:00,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:56:10,269] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:56:10,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 11:56:13,669] - [CustomizeFilter.doFilter.30        ] - ===> New request: Request(GET //www.localhost:10000/api/cms/hello_world/user?username=truongnguyen)@79d28b82
+DEBUG [2020-02-28 11:56:13,673] - [AbsApiBaseParamReqTypeCmd.execute.17] - BEGIN_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null]
+DEBUG [2020-02-28 11:56:13,675] - [DbCallableCmd.invoke.35            ] - transid: null, channel: null, sqlCommand: {CALL HELLO_WORLD(?,?,?,?)}
+ERROR [2020-02-28 11:56:13,686] - [DbCallableCmd.invoke.50            ] - [qtp1418385211-20] transid: null, channel: null
+java.sql.SQLFeatureNotSupportedException: registerOutParameter not implemented
+	at java.sql.CallableStatement.registerOutParameter(Unknown Source)
+	at com.xtel.vngolf.api.model.DbCmsHelloWorldCmd.setSqlParameter(DbCmsHelloWorldCmd.java:33)
+	at com.tbv.utils.db.cmd.DbCallableCmd.invoke(DbCallableCmd.java:40)
+	at com.tbv.utils.db.spi.DBLogicImpl$DBJobTaskImp.run(DBLogicImpl.java:23)
+	at com.tbv.utils.concurrent.DirectExecutorService.execute(DirectExecutorService.java:19)
+	at com.tbv.utils.db.spi.DBLogicImpl.executeCommand(DBLogicImpl.java:83)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseCmd.executeDbCmd(AbsApiBaseCmd.java:164)
+	at com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd.executeCmd(CmsHelloWorldCmd.java:22)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd.execute(AbsApiBaseParamReqTypeCmd.java:34)
+	at com.xtel.vngolf.api.listener.service.cms.HelloWorldService.helloWorld(HelloWorldService.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:760)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at com.xtel.vngolf.api.listener.filter.CustomizeFilter.doFilter(CustomizeFilter.java:32)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:388)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Unknown Source)
+WARN [2020-02-28 11:56:13,688] - [DBLogicImpl$DBJobTaskImp.run.27    ] - DBJob.run():Caught 'java.sql.SQLFeatureNotSupportedException: registerOutParameter not implemented'
+DEBUG [2020-02-28 11:56:13,688] - [DBLogicImpl$DBJobTaskImp.run.33    ] - DBJob.run(): command invoked: DbCmsHelloWorldCmd [username=truongnguyen, result=null]
+DEBUG [2020-02-28 11:56:13,691] - [AbsApiBaseParamReqTypeCmd.execute.43] - END_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hello_world/user, param: username=truongnguyen, token: null], cmd: com.xtel.vngolf.api.controller.channels.core.CmsHelloWorldCmd [transid=null, channel=null], time: [18ms,0s,0ds,0m], response: {"error":{"code":999,"message":"registerOutParameter not implemented"},"data":null}
+DEBUG [2020-02-28 11:56:20,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:56:30,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:56:40,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:56:50,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:57:00,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:57:10,269] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:57:10,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:57:20,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:57:30,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:57:40,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:57:50,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:58:00,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:58:10,268] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:58:10,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:58:20,306] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:58:30,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:58:40,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:58:50,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:59:00,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:59:10,267] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 11:59:10,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:59:20,304] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:59:30,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:59:40,303] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 11:59:50,302] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080

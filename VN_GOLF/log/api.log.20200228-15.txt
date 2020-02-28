@@ -1,0 +1,228 @@
+INFO [2020-02-28 15:43:59,405] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/init.xml
+INFO [2020-02-28 15:43:59,408] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\init.xml
+INFO [2020-02-28 15:43:59,409] - [AbsConfigUtils.load.98             ] - reload file: ./config/init.xml, lastModified: 0, file.lastModified(): 1526452152605
+INFO [2020-02-28 15:43:59,573] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_CORE_CONFIG_MS = 60000
+INFO [2020-02-28 15:43:59,574] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_MAIL_CONFIG_MS = 10000
+INFO [2020-02-28 15:43:59,575] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/core.xml
+INFO [2020-02-28 15:43:59,575] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\core.xml
+INFO [2020-02-28 15:43:59,575] - [AbsConfigUtils.load.98             ] - reload file: ./config/core.xml, lastModified: 0, file.lastModified(): 1582279943632
+INFO [2020-02-28 15:43:59,582] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: API_PORT = 10000
+INFO [2020-02-28 15:43:59,582] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CONTEXT_PATH = /api
+INFO [2020-02-28 15:43:59,583] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DAY_INPUT_FORMAT = dd-MM-yyyy
+INFO [2020-02-28 15:43:59,583] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_INPUT_FORMAT = dd-MM-yyyy_HH:mm:ss
+INFO [2020-02-28 15:43:59,583] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_OUTPUT_FORMAT = dd/MM/yyyy HH:mm:ss
+INFO [2020-02-28 15:43:59,584] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: TOKEN_LOG_MAX_LENGTH = 50
+INFO [2020-02-28 15:43:59,584] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: RESPONSE_LOG_MAX_LENGTH = 500
+INFO [2020-02-28 15:43:59,584] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: URL_MESSAGE_SENDER_TIMEOUT = 20000
+INFO [2020-02-28 15:43:59,585] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: ORDER_URL_API = http://localhost:10401/api
+INFO [2020-02-28 15:43:59,585] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CARD_URL_API = http://222.252.16.140:10403/card/partner/api
+INFO [2020-02-28 15:43:59,591] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/mail.xml
+INFO [2020-02-28 15:43:59,591] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\mail.xml
+INFO [2020-02-28 15:43:59,591] - [AbsConfigUtils.load.98             ] - reload file: ./config/mail.xml, lastModified: 0, file.lastModified(): 1580883891080
+INFO [2020-02-28 15:43:59,601] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).HOST = smtp.gmail.com
+INFO [2020-02-28 15:43:59,602] - [XMLConfigExt.getInt.74             ] - [1] [MailConfig] property: MAIL(0).PORT = 587
+INFO [2020-02-28 15:43:59,603] - [XMLConfigExt.getBoolean.94         ] - [1] [MailConfig] property: MAIL(0).SSL = false
+INFO [2020-02-28 15:43:59,604] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).PROTOCOL = smtp
+INFO [2020-02-28 15:43:59,604] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROM_PERSONAL = TENHIENTHI
+INFO [2020-02-28 15:43:59,606] - [MailConfig.loadFroms.65            ] - [1] load config size FROMS: 1
+INFO [2020-02-28 15:43:59,606] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).FROM_MAIL(0) = kythuat@xx.vn
+INFO [2020-02-28 15:43:59,607] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).USERNAME(0) = kythuat@xx.vn
+INFO [2020-02-28 15:43:59,607] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).PASSWORD(0) = xxx
+INFO [2020-02-28 15:43:59,609] - [MailConfig.loadFroms.79            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 15:43:59,610] - [MailConfig.loadFroms.82            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 15:43:59,610] - [MailConfig.loadFroms.90            ] - [1] load config FROMS: [FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]]
+INFO [2020-02-28 15:43:59,924] - [DBLogicImpl.init.56                ] - Start DBLogic
+INFO [2020-02-28 15:43:59,937] - [MainApplication.start.78           ] - base service package: com.xtel.vngolf.api.listener.service
+INFO [2020-02-28 15:44:00,430] - [CustomizeFilter.init.24            ] - Initializing filter, config: {}org.eclipse.jetty.servlet.FilterHolder$Config@21507a04
+INFO [2020-02-28 15:44:01,714] - [MainApplication.start.86           ] - -----------------------------MODULE IS STARTED SUCCESS!-----------------------------
+DEBUG [2020-02-28 15:44:09,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:44:19,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+INFO [2020-02-28 15:44:25,613] - [CustomizeFilter.doFilter.30        ] - ===> New request: Request(GET //www.localhost:10000/api/cms/hotel/list)@49498a4d
+DEBUG [2020-02-28 15:44:25,800] - [AbsApiBaseParamReqTypeCmd.execute.17] - BEGIN_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hotel/list, param: null, token: null]
+DEBUG [2020-02-28 15:44:26,978] - [DbCallableCmd.invoke.35            ] - transid: null, channel: null, sqlCommand: {CALL NULL(?)}
+ERROR [2020-02-28 15:44:27,120] - [DbCallableCmd.invoke.50            ] - [qtp1418385211-15] transid: null, channel: null
+java.sql.SQLException: No value specified for parameter 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:413)
+	at com.mysql.cj.jdbc.CallableStatement.execute(CallableStatement.java:842)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:169)
+	at com.tbv.utils.db.cmd.DbCallableCmd.invoke(DbCallableCmd.java:42)
+	at com.tbv.utils.db.spi.DBLogicImpl$DBJobTaskImp.run(DBLogicImpl.java:23)
+	at com.tbv.utils.concurrent.DirectExecutorService.execute(DirectExecutorService.java:19)
+	at com.tbv.utils.db.spi.DBLogicImpl.executeCommand(DBLogicImpl.java:83)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseCmd.executeDbCmd(AbsApiBaseCmd.java:164)
+	at com.xtel.vngolf.api.controller.channels.core.CmsHotelGetListCmd.executeCmd(CmsHotelGetListCmd.java:17)
+	at com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd.execute(AbsApiBaseParamReqTypeCmd.java:34)
+	at com.xtel.vngolf.api.listener.service.cms.HotelService.getList(HotelService.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:365)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:318)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:760)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at com.xtel.vngolf.api.listener.filter.CustomizeFilter.doFilter(CustomizeFilter.java:32)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:135)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Unknown Source)
+WARN [2020-02-28 15:44:27,122] - [DBLogicImpl$DBJobTaskImp.run.27    ] - DBJob.run():Caught 'java.sql.SQLException: No value specified for parameter 1'
+DEBUG [2020-02-28 15:44:27,122] - [DBLogicImpl$DBJobTaskImp.run.33    ] - DBJob.run(): command invoked: DbCmsHotelGetListCmd [list=null]
+DEBUG [2020-02-28 15:44:27,146] - [AbsApiBaseParamReqTypeCmd.execute.43] - END_CMD transid: null, channel: null, request: [from_addr: 0:0:0:0:0:0:0:1, method: GET, path: /cms/hotel/list, param: null, token: null], cmd: com.xtel.vngolf.api.controller.channels.core.CmsHotelGetListCmd [transid=null, channel=null], time: [1346ms,1s,0ds,0m], response: {"error":{"code":999,"message":"No value specified for parameter 1"},"data":null}
+DEBUG [2020-02-28 15:44:29,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:44:39,614] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:44:49,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:44:59,590] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:44:59,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:45:09,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:45:19,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:45:29,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:45:39,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:45:49,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:45:59,591] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:45:59,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:46:09,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:46:19,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:46:29,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:46:39,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:46:49,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:46:59,590] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:46:59,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:47:09,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:47:19,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:47:29,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:47:39,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:47:49,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:47:59,592] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:47:59,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:48:09,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:48:19,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:48:29,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:48:39,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:48:49,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:48:59,592] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:48:59,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:49:09,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:49:19,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:49:29,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:49:39,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:49:49,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:49:59,590] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:49:59,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:50:09,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:50:19,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:50:29,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:50:39,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:50:49,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:50:59,590] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:50:59,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:51:09,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:51:19,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:51:29,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:51:39,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:51:49,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:51:59,590] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:51:59,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:52:09,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:52:19,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:52:29,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:52:39,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:52:49,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:52:59,591] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:52:59,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:53:09,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:53:19,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:53:29,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:53:39,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:53:49,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:53:59,590] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:53:59,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:54:09,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:54:19,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:54:29,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:54:39,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:54:49,614] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:54:59,592] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:54:59,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:55:09,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:55:19,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:55:29,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:55:39,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:55:49,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:55:59,591] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:55:59,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:56:09,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:56:19,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:56:29,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:56:39,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:56:49,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:56:59,590] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:56:59,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:57:09,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:57:19,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:57:29,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:57:39,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:57:49,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:57:59,597] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:57:59,616] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:58:09,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:58:19,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:58:29,614] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:58:39,614] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:58:49,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:58:59,597] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:58:59,616] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:59:09,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:59:19,614] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:59:29,613] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:59:39,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:59:49,611] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080
+DEBUG [2020-02-28 15:59:59,590] - [AbsConfigUtils.load.119            ] - not reload file: ./config/core.xml, lastModified: 1582279943632, file.lastModified(): 1582279943632
+DEBUG [2020-02-28 15:59:59,612] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1580883891080, file.lastModified(): 1580883891080

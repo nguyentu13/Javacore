@@ -1,5 +1,7 @@
 package com.xtel.restful;
 
+import java.net.InetSocketAddress;
+
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -13,7 +15,7 @@ public class Main {
 		config.packages("com.xtel.restful.service");
 		ServletHolder servlet = new ServletHolder(new ServletContainer(config));
 
-		Server server = new Server(8080);
+		Server server = new Server(new InetSocketAddress("192.168.1.122",8080));
 		ServletContextHandler context = new ServletContextHandler(server, "/*");
 		context.addServlet(servlet, "/*");
 		

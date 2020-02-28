@@ -6,16 +6,18 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-	@Value("${loda.mysql.url}")
-	String mysqlUrl;
-	
-	  @Bean
-	    DatabaseConnection mysqlConfigure() {
-	        DatabaseConnection mySqlConnector = new MysqlConnection();
-	        // Set Url
-	        System.out.println("Config Mysql Url: " + mysqlUrl);
-	        mySqlConnector.setUrl(mysqlUrl);
-	        // Set username, password, format, v.v...
-	        return mySqlConnector;
-	    }
+
+    // Lấy giá trị config từ file application.properties
+    @Value("${loda.mysql.url}")
+    String mysqlUrl;
+
+    @Bean
+    DatabaseConnector mysqlConfigure() {
+        DatabaseConnector mySqlConnector = new MySqlConnector();
+        // Set Url
+        System.out.println("Config Mysql Url: " + mysqlUrl);
+        mySqlConnector.setUrl(mysqlUrl);
+        // Set username, password, format, v.v...
+        return mySqlConnector;
+    }
 }

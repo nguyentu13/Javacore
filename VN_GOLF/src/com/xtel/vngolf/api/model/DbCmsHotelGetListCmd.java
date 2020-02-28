@@ -1,0 +1,63 @@
+package com.xtel.vngolf.api.model;
+
+import java.sql.ResultSet;
+import java.util.List;
+
+import com.tbv.utils.db.cmd.DbCallableCmd;
+import com.xtel.vngolf.api.listener.entities.CmsHotel;
+
+public class DbCmsHotelGetListCmd extends DbCallableCmd{
+	private List<CmsHotel> list;
+	
+	public DbCmsHotelGetListCmd(String transid, String channel) {
+		super(transid, channel);
+	}
+
+	@Override
+	protected void getOutputResult() throws Exception {
+		ResultSet rs = cst.executeQuery();
+		if(rs!=null) {
+			try {
+				while(rs.next()) {
+					CmsHotel obj = new CmsHotel();
+					obj.setId(rs.getInt("id"));
+					obj.setName(rs.getString("name"));
+					obj.setDescription(rs.getString("description"));
+					list.add(obj);
+				}
+			}
+			catch(Exception ex) {
+				code = 999;
+				message = "UNKNOW ERROR";
+				throw ex;
+			}
+			finally {
+				rs.close();
+			}
+		}
+		
+		code = 0;
+		message = "SUCCESS";
+	}	
+
+	@Override
+	protected void setSqlCommand() throws Exception {
+		setProc("xxx", 2);
+	}
+
+	@Override
+	protected void setSqlParameter() throws Exception {
+		cst.setInt(idx++, 1);
+		cst.setInt(idx++, 2);
+	}
+
+	@Override
+	public String toString() {
+		return "DbCmsHotelGetListCmd [list=" + list + "]";
+	}
+
+	public List<CmsHotel> getList() {
+		return list;
+	}		
+
+}

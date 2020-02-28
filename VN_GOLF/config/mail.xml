@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<MAIL>
+		<HOST>smtp.gmail.com</HOST>
+		<PORT>587</PORT>
+		<SSL>false</SSL>
+		<PROTOCOL>smtp</PROTOCOL>
+		<FROM_PERSONAL>TENHIENTHI</FROM_PERSONAL>
+		<DISPLAY_PASSWORD>false</DISPLAY_PASSWORD>
+
+		<FROMS>
+			<FROM>
+				<FROM_MAIL>
+					kythuat@xx.vn
+				</FROM_MAIL>
+					<USERNAME>
+						kythuat@xx.vn
+					</USERNAME>
+						<PASSWORD>xxx</PASSWORD>
+			</FROM>
+		</FROMS>
+	</MAIL>
+
+</configuration>
