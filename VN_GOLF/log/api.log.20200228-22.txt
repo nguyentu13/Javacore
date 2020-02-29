@@ -1,0 +1,38 @@
+INFO [2020-02-28 22:34:55,717] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/init.xml
+INFO [2020-02-28 22:34:55,721] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\init.xml
+INFO [2020-02-28 22:34:55,723] - [AbsConfigUtils.load.98             ] - reload file: ./config/init.xml, lastModified: 0, file.lastModified(): 1582885239762
+INFO [2020-02-28 22:34:56,034] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_CORE_CONFIG_MS = 60000
+INFO [2020-02-28 22:34:56,034] - [XMLConfigExt.getLong.104           ] - [1] [InitConfig] property: CHECK_RELOAD_CONFIG(0).INTERVAL_FOR_MAIL_CONFIG_MS = 10000
+INFO [2020-02-28 22:34:56,036] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/core.xml
+INFO [2020-02-28 22:34:56,036] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\core.xml
+INFO [2020-02-28 22:34:56,036] - [AbsConfigUtils.load.98             ] - reload file: ./config/core.xml, lastModified: 0, file.lastModified(): 1582885239761
+INFO [2020-02-28 22:34:56,079] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: API_PORT = 10000
+INFO [2020-02-28 22:34:56,080] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CONTEXT_PATH = /api
+INFO [2020-02-28 22:34:56,080] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DAY_INPUT_FORMAT = dd-MM-yyyy
+INFO [2020-02-28 22:34:56,080] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_INPUT_FORMAT = dd-MM-yyyy_HH:mm:ss
+INFO [2020-02-28 22:34:56,081] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: API_DATE_TIME_OUTPUT_FORMAT = dd/MM/yyyy HH:mm:ss
+INFO [2020-02-28 22:34:56,081] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: TOKEN_LOG_MAX_LENGTH = 50
+INFO [2020-02-28 22:34:56,081] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: RESPONSE_LOG_MAX_LENGTH = 500
+INFO [2020-02-28 22:34:56,082] - [XMLConfigExt.getInt.64             ] - [1] [CoreConfig] property: URL_MESSAGE_SENDER_TIMEOUT = 20000
+INFO [2020-02-28 22:34:56,082] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: ORDER_URL_API = http://localhost:10401/api
+INFO [2020-02-28 22:34:56,082] - [XMLConfigExt.getString.44          ] - [1] [CoreConfig] property: CARD_URL_API = http://222.252.16.140:10403/card/partner/api
+INFO [2020-02-28 22:34:56,091] - [AbsConfigUtils.init.46             ] - init config from config path: ./config/mail.xml
+INFO [2020-02-28 22:34:56,091] - [AbsConfigUtils.init.55             ] - create java.io.File from config path: .\config\mail.xml
+INFO [2020-02-28 22:34:56,091] - [AbsConfigUtils.load.98             ] - reload file: ./config/mail.xml, lastModified: 0, file.lastModified(): 1582885239762
+INFO [2020-02-28 22:34:56,108] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).HOST = smtp.gmail.com
+INFO [2020-02-28 22:34:56,109] - [XMLConfigExt.getInt.74             ] - [1] [MailConfig] property: MAIL(0).PORT = 587
+INFO [2020-02-28 22:34:56,111] - [XMLConfigExt.getBoolean.94         ] - [1] [MailConfig] property: MAIL(0).SSL = false
+INFO [2020-02-28 22:34:56,114] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).PROTOCOL = smtp
+INFO [2020-02-28 22:34:56,116] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROM_PERSONAL = TENHIENTHI
+INFO [2020-02-28 22:34:56,119] - [MailConfig.loadFroms.65            ] - [1] load config size FROMS: 1
+INFO [2020-02-28 22:34:56,121] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).FROM_MAIL(0) = kythuat@xx.vn
+INFO [2020-02-28 22:34:56,141] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).USERNAME(0) = kythuat@xx.vn
+INFO [2020-02-28 22:34:56,147] - [XMLConfigExt.getString.54          ] - [1] [MailConfig] property: MAIL(0).FROMS.FROM(0).PASSWORD(0) = xxx
+INFO [2020-02-28 22:34:56,149] - [MailConfig.loadFroms.79            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 22:34:56,158] - [MailConfig.loadFroms.82            ] - [1] add FROM to FROMS: FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]
+INFO [2020-02-28 22:34:56,160] - [MailConfig.loadFroms.90            ] - [1] load config FROMS: [FromMailEntity [fromMail=kythuat@xx.vn, username=kythuat@xx.vn, password=xxx]]
+INFO [2020-02-28 22:34:56,890] - [DBLogicImpl.init.56                ] - Start DBLogic
+INFO [2020-02-28 22:34:56,891] - [MainApplication.start.76           ] - base service package: com.xtel.vngolf.api.listener.service
+INFO [2020-02-28 22:34:57,359] - [CustomizeFilter.init.24            ] - Initializing filter, config: {}org.eclipse.jetty.servlet.FilterHolder$Config@7a52f2a2
+INFO [2020-02-28 22:34:59,432] - [MainApplication.start.84           ] - -----------------------------MODULE IS STARTED SUCCESS!-----------------------------
+DEBUG [2020-02-28 22:35:06,163] - [AbsConfigUtils.load.119            ] - not reload file: ./config/mail.xml, lastModified: 1582885239762, file.lastModified(): 1582885239762

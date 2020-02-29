@@ -13,8 +13,13 @@ public class HotelService extends BaseService{
 	@Path("list")
 	@GET
 	public Response getList(@QueryParam("transid") String transid,
-			@QueryParam("channel") String channel) {
-		CmsHotelGetListCmd cmd = new CmsHotelGetListCmd(httpServletRequest,channel,transid);
+							@QueryParam("channel") String channel,
+							@QueryParam("page_index") int page_index,
+							@QueryParam("page_size") int page_size,
+							@QueryParam("order_by") String order_by,
+							@QueryParam("order_type") String order_type) {
+		CmsHotelGetListCmd cmd = new CmsHotelGetListCmd(httpServletRequest,channel,transid,
+				page_index,page_size,order_by,order_type);
 		cmd.execute();
 		return cmd.getResponse();
 	}

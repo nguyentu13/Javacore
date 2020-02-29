@@ -4,7 +4,6 @@ import com.tbv.utils.app.AbsAppBase;
 import com.tbv.utils.config.base.AbsConfigUtils;
 import com.tbv.utils.db.DbModule;
 import com.xtel.vngolf.api.client.GHClient;
-import com.xtel.vngolf.api.common.mail.MailSender;
 import com.xtel.vngolf.api.config.CoreConfig;
 import com.xtel.vngolf.api.config.InitConfig;
 import com.xtel.vngolf.api.config.MailConfig;
@@ -69,10 +68,9 @@ public class MainApplication extends AbsAppBase {
 			cmsDb = new DbModule(pathConf + "db.xml");
 			cmsDb.startUp();
 		} catch (Exception e) {
-			logger.warn(e.getMessage(), e);
-			return;
-		}
-		MailSender.setup();
+            logger.warn(e.getMessage(), e);
+            return;
+        }
 		
 		String baseServicePackage = BaseService.class.getPackage().getName();
 		logger.info(("base service package: " + baseServicePackage));

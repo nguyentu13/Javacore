@@ -15,9 +15,9 @@
                     <defaultBatchValue>-1</defaultBatchValue>
                     <defaultRowPrefetch>-1</defaultRowPrefetch>
                     <autoCommit>false</autoCommit>                    
-                    <url>jdbc:mysql://localhost:3306/vn_golf?zeroDateTimeBehavior=convertToNull</url>
-                    <user>root</user>
-                    <password>12111993</password>
+                    <url>jdbc:mysql://222.252.16.140:10306/truong_public</url>
+                    <user>truong_nguyen</user>
+                    <password>truong@123@</password>
                 </connection>
                 <fastConnectionFailoverEnabled>false</fastConnectionFailoverEnabled>
                 <statement_cached>false</statement_cached>
