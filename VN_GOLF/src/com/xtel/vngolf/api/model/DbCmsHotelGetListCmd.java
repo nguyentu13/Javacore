@@ -5,7 +5,6 @@ import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.tbv.utils.db.cmd.DbCallableCmd;
 import com.tbv.utils.db.cmd.DbPagingCmd;
 import com.tbv.utils.db.entities.PagingEntity;
 import com.xtel.vngolf.api.listener.entities.CmsHotel;
@@ -15,20 +14,22 @@ public class DbCmsHotelGetListCmd extends DbPagingCmd {
 	private int page_size;
 	private String order_by;
 	private String order_type;
+	private String keyword;
 	private List<CmsHotel> list;
 	
 	public DbCmsHotelGetListCmd(String transid, String channel,int page_index,int page_size,
-								String order_by,String order_type) {
+								String order_by,String order_type,String keyword) {
 		super(transid, channel);
 		this.page_index = page_index;
 		this.page_size = page_size;
 		this.order_by = order_by;
 		this.order_type = order_type;
+		this.keyword = keyword;
 	}
 
 	@Override
 	protected void setSqlCommand() throws Exception {
-		setProc("hotel_get_list", 10);
+		setProc("hotel_search", 11);
 	}
 
 	@Override
@@ -43,6 +44,7 @@ public class DbCmsHotelGetListCmd extends DbPagingCmd {
 		cst.setInt(idx++, Types.INTEGER);
 		cst.setInt(idx++, Types.INTEGER);
 		cst.setInt(idx++, Types.INTEGER);
+		cst.setString(idx++,keyword);
 	}
 
 	@Override
