@@ -1,4 +1,4 @@
-package com.xtel.vngolf.api.main;
+//package com.xtel.vngolf.api.main;
 //package com.xtel.vngofl.api.main;
 //
 //import com.google.gson.Gson;
@@ -12,10 +12,10 @@ package com.xtel.vngolf.api.main;
 //	public static void main(String[] args) {
 //		Gson gson = new GsonBuilder().setDateFormat(CoreConfig.API_DATE_TIME_OUTPUT_FORMAT).serializeNulls()
 //				.setPrettyPrinting().create();
-//		
+//
 //		String json = gson.toJson(new CmsUser());
-//		System.out.println(json);	
-//		
+//		System.out.println(json);
+//
 //		String test = StringUtils.encodeMD5("Xtel2020!$");
 //		System.out.println(test);
 //	}
