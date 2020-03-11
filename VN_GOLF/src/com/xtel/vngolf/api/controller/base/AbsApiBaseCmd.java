@@ -251,7 +251,7 @@ public abstract class AbsApiBaseCmd {
 		if (userCmsLogin == null) {
 			return 0;
 		}
-		return userCmsLogin.getUser_id();
+		return userCmsLogin.getId();
 	}
 
 	public String getUserCmsLoginUserName() {
