@@ -16,11 +16,16 @@ public class DbCmsGolfCourseGetListCmd extends DbPagingCmd{
 	    private int page_size;
 	   private List<CmsGolfCourse> list;
 	   private int total_page;
-	   
-	public DbCmsGolfCourseGetListCmd(String transid, String channel, int page_index, int page_size) {
+	   private int lang_id;
+
+
+
+
+	public DbCmsGolfCourseGetListCmd(String transid, String channel, int page_index, int page_size, int lang_id) {
 		super(transid, channel);
 		this.page_index = page_index;
 		this.page_size = page_size;
+		this.lang_id = lang_id;
 	}
 
 	@Override
@@ -53,7 +58,7 @@ public class DbCmsGolfCourseGetListCmd extends DbPagingCmd{
 
 	@Override
 	protected void setSqlCommand() throws Exception {
-		setProc("golf_course_get_list", 6);
+		setProc("golf_course_get_list", 7);
 	}
 
 	@Override
@@ -72,6 +77,7 @@ public class DbCmsGolfCourseGetListCmd extends DbPagingCmd{
         else{
             cst.setInt(idx++,page_size);
         }
+        cst.setInt(idx++, lang_id);
 		cst.setInt(idx++, Types.INTEGER);
 		cst.setInt(idx++, Types.INTEGER);
 	

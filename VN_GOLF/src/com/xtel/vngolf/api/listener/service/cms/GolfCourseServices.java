@@ -16,9 +16,10 @@ public class GolfCourseServices extends BaseService{
 	public Response getList(@QueryParam("channel") String channel, 
 			@QueryParam("transid") String transid,
 			@QueryParam("page_index") int page_index,
-			@QueryParam("page_size") int page_size
+			@QueryParam("page_size") int page_size,
+			@QueryParam("lang_id") int lang_id
 			) {
-		CmsGolfCourseListCmd cmd = new CmsGolfCourseListCmd(httpServletRequest, channel, transid, page_index , page_size);
+		CmsGolfCourseListCmd cmd = new CmsGolfCourseListCmd(httpServletRequest, channel, transid, page_index , page_size, lang_id);
 		cmd.execute();
 		return cmd.getResponse();
 		
