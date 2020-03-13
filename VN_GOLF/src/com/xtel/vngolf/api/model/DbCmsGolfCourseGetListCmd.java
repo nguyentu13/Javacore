@@ -87,8 +87,5 @@ public class DbCmsGolfCourseGetListCmd extends DbPagingCmd{
 		return list;
 	}
 
-
-
-
 	
 }

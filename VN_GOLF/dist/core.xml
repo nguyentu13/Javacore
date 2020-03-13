@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<API_PORT>10601</API_PORT>
+	<CONTEXT_PATH>/api</CONTEXT_PATH>
+	<API_DATE_TIME_INPUT_FORMAT>dd-MM-yyyy_HH:mm:ss</API_DATE_TIME_INPUT_FORMAT>
+	<API_DATE_TIME_OUTPUT_FORMAT>dd/MM/yyyy HH:mm:ss</API_DATE_TIME_OUTPUT_FORMAT>
+	<RESPONSE_LOG_MAX_LENGTH>500</RESPONSE_LOG_MAX_LENGTH>	
+	
+	<ORDER_URL_API>http://localhost:10401/api</ORDER_URL_API>
+	<CARD_URL_API>http://222.252.16.140:10403/card/partner/api</CARD_URL_API>
+	
+	<BASE_URL>
+		<URL>
+			<KEY>ORDER_URL_API</KEY>
+			<VALUE>http://localhost:10401/api</VALUE>
+		</URL>
+		<URL>
+			<KEY>CARD_URL_API</KEY>
+			<VALUE>http://222.252.16.140:10403/card/partner/api</VALUE>
+		</URL>
+	</BASE_URL>
+	
+</configuration>
+
