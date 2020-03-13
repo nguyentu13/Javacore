@@ -26,7 +26,7 @@ public class CmsListEventCmd extends AbsApiBaseParamReqTypeCmd{
 	protected void executeCmd() throws Exception {
 		DBCmsListEventCmd dbCmd = new DBCmsListEventCmd(transid,channel,page_index,page_size,lang_id);
 		executeDbCmd(dbCmd);
-		setResponse(dbCmd.getCode(),dbCmd.getMessage(),new BasicItemListData(dbCmd.getList_event()));
+		setResponse(0,"SUCCESS",new BasicItemListData(dbCmd.getList_event()));
 		
 	}
 	
