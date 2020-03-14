@@ -4,8 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.xtel.vngolf.api.controller.base.AbsApiBaseParamReqTypeCmd;
 import com.xtel.vngolf.api.listener.response.data.BasicItemData;
-import com.xtel.vngolf.api.listener.response.data.BasicItemListData;
-import com.xtel.vngolf.api.listener.service.cms.GolfCourseServices;
 import com.xtel.vngolf.api.model.DbCmsGolfCourseDetailCmd;
 
 public class CmsGolfCourseDetailCmd extends AbsApiBaseParamReqTypeCmd{

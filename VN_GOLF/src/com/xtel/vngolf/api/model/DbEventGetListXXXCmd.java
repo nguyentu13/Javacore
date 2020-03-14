@@ -2,6 +2,7 @@ package com.xtel.vngolf.api.model;
 
 import com.tbv.utils.db.cmd.DbPagingCmd;
 import com.tbv.utils.db.entities.PagingEntity;
+import com.tbv.utils.textbase.StringUtils;
 import com.xtel.vngolf.api.listener.response.data.EventServiceGetListResponse;
 
 import java.sql.ResultSet;
@@ -44,8 +45,19 @@ public class DbEventGetListXXXCmd extends DbPagingCmd {
         cst.setInt(idx++,Types.VARCHAR);
         cst.setInt(idx++,page_index);
         cst.setInt(idx++,page_size);
-        cst.setString(idx++,null);
-        cst.setString(idx++,null);
+        if(StringUtils.isNullOrEmpty(order_by)){
+            cst.setNull(idx++,Types.VARCHAR);
+        }
+        else{
+            cst.setString(idx++,order_by);
+        }
+
+        if(StringUtils.isNullOrEmpty(order_type)){
+            cst.setNull(idx++,Types.VARCHAR);
+        }
+        else{
+            cst.setString(idx++,order_type);
+        }
 
         if(category_id == 0){
             cst.setNull(idx++,Types.INTEGER);
@@ -61,7 +73,13 @@ public class DbEventGetListXXXCmd extends DbPagingCmd {
             cst.setDate(idx++, new java.sql.Date(date.getTime()));
         }
 
-        cst.setString(idx++,null);
+        if(StringUtils.isNullOrEmpty(order_by)){
+            cst.setNull(idx++,Types.VARCHAR);
+        }
+        else{
+            cst.setString(idx++,author);
+        }
+
         cst.setInt(idx++,language_id);
         cst.setInt(idx++, Types.INTEGER);
         cst.setInt(idx++, Types.INTEGER);

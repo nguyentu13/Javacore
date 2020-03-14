@@ -50,9 +50,12 @@ public class DbCmsGolfCourseGetListCmd extends DbPagingCmd{
 				golfCourse.setCurrency_unit(rs.getString(10));
 				list.add(golfCourse);
 			}
-			rs.close();
+
 		} catch (Exception e) {
-			// TODO: handle exception
+			throw e;
+		}
+		finally{
+			rs.close();
 		}
 	}
 
@@ -87,5 +90,14 @@ public class DbCmsGolfCourseGetListCmd extends DbPagingCmd{
 		return list;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "DbCmsGolfCourseGetListCmd{" +
+				"page_index=" + page_index +
+				", page_size=" + page_size +
+				", list.size=" + (list == null? 0:list.size()) +
+				", total_page=" + total_page +
+				", lang_id=" + lang_id +
+				'}';
+	}
 }

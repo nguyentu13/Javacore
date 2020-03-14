@@ -1,13 +1,10 @@
 package com.xtel.vngolf.api.model;
 
-import java.sql.ResultSet;
 import java.sql.Types;
 import java.util.ArrayList;
 
 import com.tbv.utils.db.cmd.DbCallableCmd;
-import com.xtel.vngolf.api.listener.entities.CmsGolfCourse;
 import com.xtel.vngolf.api.listener.entities.CmsGolfCourseDetail;
-import com.xtel.vngolf.api.listener.service.cms.GolfCourseServices;
 
 public class DbCmsGolfCourseDetailCmd extends DbCallableCmd{
 	private int course_id;
