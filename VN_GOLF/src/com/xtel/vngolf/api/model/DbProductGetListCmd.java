@@ -76,11 +76,13 @@ public class DbProductGetListCmd extends DbPagingCmd {
         int end_index = offset+size;
 
         if(id != 0){
-            for (Product p : data_fake){
-                if(p.getCategory_id()!=id){
-                    data_fake.remove(p);
+            List<Product> temp = new ArrayList<>();
+            for(Product p : data_fake){
+                if(p.getCategory_id()==id){
+                    temp.add(p);
                 }
             }
+            data_fake = temp;
         }
 
         for (int i = offset;i<offset+size;i++){
